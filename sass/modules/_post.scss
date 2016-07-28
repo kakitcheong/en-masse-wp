@@ -1,0 +1,235 @@
+.post{
+	@extend .col-xs-12, .col-sm-6;
+	margin-top: $el__spacer--xs;
+	&--carousel{
+		width: em(220);
+	}
+	&--alpha{
+		margin-top: 0;
+		@include respond-to(sm-screen){
+			margin-top: $el__spacer--xs;
+		}
+	}
+	// image on hover interaction
+	&__img-overlay{
+		z-index: 98;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.2);
+	}
+	&__img--featured{
+		height: em(180);
+		@include respond-to(sm-screen){
+			height: em(80);
+		}
+		@include respond-to(md-screen){
+			height: em(120);
+		}
+	}
+	&__img{
+		height: em(145);
+		@include respond-to(sm-screen){
+			height: em(180);
+		}
+	}
+	&__img--carousel{
+		height: em(120);
+	}
+	&__label{
+		display: inline-block;
+		background-color: $color__accent;
+		padding: em(7) em(12);
+		position: relative;
+		z-index: 99;
+		top: em(16);
+		left: em(8);
+	}
+	&__cat-link{
+		&:hover,
+		&:focus{
+			color: $color__grey--dark;
+		}
+	}
+	&__title{
+		@include leader(2);
+	}
+	&__title--carousel{
+		@extend .post__title;
+		text-align: left;
+	}
+	&__excerpt{
+		@extend .paragraph;
+		@include leader(1);
+		@include trailer(2);
+	}
+	&__meta{
+		color: $color__grey--light;
+		@include adjust-font-size-to(12px);
+		@include leading-border();
+		text-transform: uppercase;
+	}
+	/*** post variation -- category page ***/
+	&--lg{
+		@extend .col-xs-12;
+		margin-top: $el__spacer--xs;
+		@include respond-to(md-screen){
+			margin-top: $el__spacer--md;
+			margin-bottom: $el__spacer--xs;
+		}
+	}
+	&--lg--alpha{
+		@extend .col-xs-12;
+		.post__title--result{
+			@include leader(0);
+			.h2--lg{
+				@include leader(0);
+			}
+		}
+	}
+	&--lg__img{
+		height: em(145);
+		@include respond-to(sm-screen){
+			height: em(320)
+		}
+		@include respond-to(md-screen){
+			height: em(420);
+		}
+	}
+	&--lg__wrap{
+		@include respond-to(md-screen){
+	
+		}
+	}
+	&__excerpt--lg{
+		@extend .post__excerpt;
+		width: 85%;
+		@include trailer(3);
+	}
+	&--sm{
+		@extend .col-xs-12, .col-sm-4;
+		margin-top: $el__spacer--xs;
+	}
+}
+/*** single post style ***/
+.post-opening{
+	@extend .col-xs-12;
+	box-sizing: border-box;
+	height: em(180);
+	@include respond-to(sm-screen){
+		height: em(320);
+	}
+	@include respond-to(md-screen){
+		height: em(420);
+		margin-top: $el__spacer--sm;
+	}
+	@include respond-to(lg-screen){
+		height: em(520);
+	}
+	&__container-outer{
+		width:70%;
+    height:100%;
+    overflow:hidden;
+		display:table;
+		margin: 0 auto;
+	}
+	&__container-inner{
+		display:table-cell;
+    position:relative;
+		vertical-align:middle;
+		text-align:center;	
+	}
+	&__meta{
+		margin-top: $el__spacer--lg;
+	}
+}
+.post-content{
+	@extend .col-xs-12, .col-md-9;
+	margin-top: $el__spacer--xs;
+	@include respond-to(md-screen){
+		margin-top: $el__spacer--sm;
+	}
+	&__meta{
+		
+	}
+	&__section{
+		margin-top: $el__spacer--sm;
+	}
+	&__text{
+		@extend .col-xs-12, .col-sm-offset-1, .col-sm-10, .col-md-offset-2;
+		margin-top: $el__spacer--xs;
+		@include respond-to(md-screen){
+			margin-top: $el__spacer--sm;
+		}	
+	}
+	&__img{
+		@extend .col-xs-12, .col-sm-6;
+		//height: em(80);
+		overflow: hidden;
+		margin-top: $el__spacer--xs;
+		@include respond-to(sm-screen){
+			//height: em(120);
+		}
+		@include respond-to(md-screen){
+			//height: em(160);
+			margin-top: $el__spacer--sm;	
+		}
+		@include respond-to(lg-screen){
+			// height: em(220);
+		}
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__img--lg{
+		@extend .col-xs-12;
+		height: em(180);
+		margin-top: $el__spacer--xs;
+		@include respond-to(sm-screen){
+			height: em(280);
+		}
+		@include respond-to(md-screen){
+			height: em(320);
+			margin-top: $el__spacer--sm;	
+		}
+		@include respond-to(lg-screen){
+			height: em(360);
+		}
+	}
+	&__gallery{
+		@extend .col-xs-12;
+		margin-top: $el__spacer--sm;
+		@include respond-to(md-screen){
+			margin-top: $el__spacer--md;	
+		}
+	}
+	&__social-share{
+		@extend .col-xs-12;
+		margin-top: $el__spacer--sm;
+		padding-bottom: $el__spacer--sm;
+		border-bottom: $el__border;
+		@include respond-to(md-screen){
+			margin-top: $el__spacer--md;	
+		}
+	}
+	&__navigation{
+		@extend .col-xs-12;
+		padding: $el__spacer--xs 0 $el__spacer--xs 0;
+		border-bottom: $el__border;
+	}
+}
+/*** related posts section ***/
+.related-posts{
+	@extend .col-xs-12;
+	margin-top: $el__spacer--sm;
+	@include respond-to(md-screen){
+		margin-top: $el__spacer--md;
+	}
+}
+/*** random posts - sidebar ***/
+.post--random{
+	&__meta{
+		@extend .post__meta;
+		border-top: none;
+	}	
+}

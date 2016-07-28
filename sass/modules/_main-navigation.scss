@@ -1,0 +1,51 @@
+.main-navigation{
+	@extend .pull--center;
+	overflow: hidden;
+	max-height: 0;
+	margin-top: $el__spacer--xs;
+	@include transition(max-height, 0.4s, ease-in-out);
+	@include respond-to(md-screen){
+		max-height: em(80);
+		margin-top: $el__spacer--sm;
+		border-top: $el__border;
+		border-bottom: $el__border;
+	}
+	&__item{
+		display: inline;
+		text-align: center;	
+	}
+	&__link{
+		display: inline-block;
+		color: $color__grey--dark;
+		font-family: $secondary__font-family;
+		font-weight: 700;
+		@include adjust-font-size-to(13px);
+		letter-spacing: em(2);
+		text-transform: uppercase;
+		width: 100%;
+		padding: em(9) 0;
+		@include respond-to(md-screen){
+			width: auto;
+			padding: em(20) em(50);
+		}
+	}
+	&__link--alpha{
+		@extend .main-navigation__link;
+		padding-top: 0;
+	}
+	&__link--omega{
+		@extend .main-navigation__link;
+		@include trailer();
+		@include respond-to(md-screen){
+			margin-bottom: 0;
+		}
+	}
+	&__link--selected{
+		@extend .main-navigation__link;
+		color: $color__accent;
+	}
+}
+/* wordpress class for selected item */
+.current-menu-item .main-navigation__link{
+	color: $color__accent;
+}

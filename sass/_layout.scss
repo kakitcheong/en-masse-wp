@@ -1,0 +1,77 @@
+/*** header layout ***/
+.header{
+	@extend .container;
+	&__navigation{
+
+	}
+}
+.main{
+	@extend .container;
+}
+.carousel--author, .featured-products{
+	@extend .col-xs-12, .col-sm-offset-1, .col-sm-10, .col-lg-offset-2, .col-lg-8;
+	@include respond-to(sm-screen){
+		margin-top: $el__spacer--md;
+	}
+}
+.latest-articles{
+	@extend .col-xs-12, .col-md-9;
+	margin-top: $el__spacer--xs;
+	@include respond-to(sm-screen){
+		margin-top: $el__spacer--sm;
+	}
+}
+.aside{
+	@extend .col-xs-12, .hidden-sm, .col-md-3;
+	margin-top: $el__spacer--sm;	
+}
+.mobile-social{
+	@extend .visible-xs;
+	@include adjust-font-size-to(24px);
+	margin-top: $el__spacer--sm;
+}
+.instagram-feed{
+	@extend .col-xs-12;
+	margin-bottom: $el__spacer--md;
+}
+.about{
+	&--footer{
+		@extend .col-xs-12, .col-sm-6, .col-md-4;
+	}
+}
+/*** helper classes ***/
+.pull--center{
+	@extend .text-center;
+}
+.pull--left{
+	@extend .pull-left;
+}
+.pull--right{
+	@extend .pull-right;
+}
+.visible--mobile{
+	@extend .visible-xs, .visible-sm, .hidden-md, .hidden-lg; 
+}
+.visible--desktop{
+	@extend .hidden-xs, .hidden-sm, .visible-md, .visible-lg;
+}
+.color__accent{
+	color: $color__accent;
+}
+/*** javascript hook for putting img into it's parent's background ***/
+.bg__img{
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+/*** layout elements ***/
+.center{
+	@extend .pull--center;
+	&__btn{
+		@extend .center;
+		margin-top: $el__spacer--sm;
+		@include respond-to(sm-screen){
+			margin-top: $el__spacer--md;
+		}
+	}
+}

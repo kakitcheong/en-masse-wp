@@ -1,0 +1,48 @@
+.footer{
+	margin-top: $el__spacer--sm;
+	@include respond-to(sm-screen){
+		margin-top: $el__spacer--md;
+	}
+	&__social{
+		@extend .pull--center;
+		@include adjust-font-size-to(13px);
+		text-transform: uppercase;
+		color: $color__grey--lighter;
+		padding: em(30) 0;
+	}
+}
+.footer-top{
+	@extend .hidden-xs;
+	background-color: $color__background--footer-top;
+	@include respond-to(sm-screen){
+		padding-bottom: $el__spacer--md;
+	}
+	&__inner{
+	@extend .container;
+	}
+}
+.footer-bottom{
+	background-color: $color__background--footer-bottom;
+	&__inner{
+		@extend .container;
+		padding-top: em(24);
+		padding-bottom: em(24);
+		@include respond-to(sm-screen){
+			padding-top: em(30);
+			padding-bottom: em(30);
+		}
+	}
+}
+.logo-alt{
+	float: left;
+}
+.footer-copy{
+	@extend .pull--center;
+	color: $color__grey--lighter;
+	text-transform: uppercase;
+	@include adjust-font-size-to(12px);
+	@include respond-to(sm-screen){
+		float: left;
+		margin-left: $el__spacer--xs;
+	}
+}

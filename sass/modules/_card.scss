@@ -1,0 +1,24 @@
+.card{
+	@extend .pull--center;
+	box-sizing: border-box;
+	width: 90%;
+	background-color: $color__background;
+	position: relative;
+	top: em(-36);
+	padding: em(12) em(20);
+	border: $el__border;
+	border-top: 4px solid $color__accent;
+	margin: 0 auto;
+	@include respond-to(sm-screen){
+		width: 100%;
+		top: 0;
+		padding: 0;
+		margin: 0;
+		border: none;
+	}
+	&__meta{
+		@extend .visible-xs;
+		color: $color__grey--light;
+		@include adjust-font-size-to(12px);
+	}
+}

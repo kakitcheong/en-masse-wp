@@ -1,0 +1,14 @@
+.is__open{
+	max-height: em(220);
+}
+
+.is__sticky{
+	position: fixed;
+	background-color: $color__wht;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	border-top: none;
+	margin-top: 0;
+}

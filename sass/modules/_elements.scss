@@ -1,0 +1,333 @@
+/*** bottons ***/
+.btn{
+	display: inline-block;
+	text-transform: uppercase;
+	font-family: $secondary__font-family;
+	font-weight: 500;
+	letter-spacing: em(1);
+	padding: em(13) em(22);
+	@include border-radius(0, 0);
+	@extend .text-center;
+	&--default{
+		@extend .btn;
+		color: $color__accent;
+		border: $el__border--accent;
+	}
+	&--default:hover{
+		color: $color__wht;
+		background-color: $color__accent;
+	}
+	&--primary{
+		@extend .btn;
+		color: $color__wht;
+		background-color: $color__accent;
+	}
+}
+.load-more{
+	@extend .col-xs-12;
+	margin-top: $el__spacer--md;
+}
+/*** lists ***/
+.h-list{
+	margin: 0 auto;
+	&__item{
+		display: inline;
+	}
+	&__link{
+		display: inline-block;
+		width: auto;
+	}
+}
+.h-list--lg{
+	@extend .h-list;
+	@include adjust-font-size-to(24px);
+}
+.v-list{
+	&__item{
+		text-align: left;
+		@include adjust-font-size-to(13px);
+		text-transform: uppercase;
+		margin: em(5) 0 0 0;
+	}
+		&--mega__item{
+		@extend .v-list__item;
+		color: $color__grey;
+		letter-spacing: em(1);
+	}
+	&--footer{
+		color: $color__grey--light;
+		float: left;
+		margin-right: em(30);
+		@include adjust-leading-to(4);
+	}
+}
+/*** pagination ***/
+.pagination{
+	margin-top: $el__spacer--xs;
+		@include respond-to(md-screen){
+			margin-top: $el__spacer--md;
+		}
+	&__list{
+		@extend .h-list;
+	}
+	&__item{
+		@extend .pull--center;
+		background-color: $color__grey--dark;
+		display: block;
+		float: left;
+		margin: 0 $el__spacer--xs 0 0;
+		color: $color__wht;
+		@include transition(background-color, 0.8s, ease-out);
+		span, a{
+			@include adjust-font-size-to(14px);
+			position: relative;
+			display: inline-block;
+			width: em(36);
+			height: em(36);
+			line-height: em(36);
+			margin: 0;
+			padding: 0;
+		}
+		a:hover{
+			color: $color__grey--dark;
+		}
+	}
+	&__item:hover{
+		background-color: $color__accent;
+		@include transition(background-color, 0.6s, ease-in);
+	}
+	&__item--active{
+		@extend .pagination__item;
+		background-color: $color__accent;
+	}
+	&__item--next{
+		@extend .pagination__item;
+	}
+}
+/*** form ***/
+.base-form{
+	&__item--full{
+		width: 100%;
+		box-sizing: border-box;
+		margin-top: $el__spacer--xs;
+	}
+}
+input{
+	font-style: italic;
+	padding: em(13) em(17);
+	border: $el__border;
+}
+input[type="email"] {
+	@include input-placeholder{
+		font-family: $secondary__font-family;
+		font-weight: 500;
+		color: $color__grey--light;
+		@include adjust-font-size-to(12px);
+	}
+}
+.form{
+	&--footer{
+		@extend .col-xs-12, .col-sm-4, .hidden-md, .hidden-lg;
+	}
+}
+/*** random post component style ***/
+.random-post{
+	&__more{
+		&__link{
+			color: $color__grey--light;
+			@include adjust-font-size-to(12px);
+			text-transform: uppercase;
+		}
+	}
+	&__item:first-child{
+		padding-top: $el__spacer--sm;
+		margin-top: 0;
+		@include leading-border();
+	}
+	&__item{
+		margin-top: $el__spacer--xs;	
+	}
+}
+/*** search box ***/
+.search-box{
+	&__input-text{
+		padding: em(4) em(8);
+		&--aside{
+			@extend .search-box__input-text;
+			width: 80%;
+		}
+		&:focus{
+			outline-width: 0;
+			outline: none;
+			border: 1px solid $color__accent;	
+		}
+	}
+	&__input-btn{
+		background-color: $color__accent;
+		position: relative;
+		left: em(-20);
+		padding: em(4) em(4);
+		border: none;
+		&:focus{
+			outline-width: 0;
+			outline: none;
+		}
+	}
+}
+/*** custom control ***/
+.custom-control{
+	margin-top: $el__spacer--sm;
+	&__item{
+		background-color: $color__accent;
+		color: $color__wht;
+	}
+	&__btn{
+		@include adjust-font-size-to(14px);
+		padding: em(8) em(10);
+	}
+	&__btn:hover,
+	&__btn:focus{	
+		color: $color__grey;
+	}
+}
+/*** breadcrumb ***/
+.breadcrumb-bar{
+	@extend .hidden-xs;
+	&__list{
+		@extend .breadcrumb;
+		background-color: transparent;
+		padding: 0 0 $el__spacer--xs/2 0;
+		@include respond-to(md-screen){
+			padding: $el__spacer--xs $el__spacer--xs*1.2;
+		}
+	}
+	&__item{
+
+	}
+	&__link{
+		@include adjust-font-size-to(13px);
+		text-transform: uppercase;
+		letter-spacing: em(2);
+		color: $color__grey;	
+	}
+	&__link--active{
+		@extend .breadcrumb-bar__link;
+		color: $color__accent;
+	}
+}
+.breadcrumb-bar__list > li + li:before{
+	content: "> ";
+	padding: 0 em(6);
+	color: $color__accent;
+}
+/*** page-title ***/
+.page-opening{
+	padding: 0 0 $el__spacer--xs 0;
+	@include respond-to(md-screen){
+		padding: 0 0 $el__spacer--xs $el__spacer--xs*1.2 ;
+	}
+	border-bottom: $el__border;
+	&__title{
+		color: $color__accent;
+	}
+	&__title--category:before{
+		content: "All articles from ";
+	}
+	&__title--category:after{
+		content: " category";
+	}
+	&__title--author:before{
+		content: "Author: ";
+	}
+	&__title--search:before{
+		content: "Search results for: "
+	}
+}
+/*** single navigation ***/
+.single-navigation{
+	width: 100%;
+	position: relative;
+	vertical-align: middle;
+	display: table;
+	table-layout: fixed;
+	clear: both;
+	&__prev{
+		text-align: right;
+		position: relative;
+		display: table-cell;
+		width: 50%;
+		box-sizing: border-box;
+		a{
+			width: 100%;
+		}
+	}
+	&__next{
+		text-align: left;
+		position: relative;
+		display: table-cell;
+		width: 50%;
+		box-sizing: border-box;
+		border-left: $el__border;
+		a{
+			width: 100%;
+		}
+	}
+	&__indicator{
+		display: inline-block;
+		vertical-align: middle;
+		margin-top: -2px;
+	}
+	&__post-title{
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		box-sizing: border-box;
+    width: calc(100% - 1.5em);
+    padding: 0  $el__spacer--xs;
+	}
+	&__post-title--prev{
+		@extend .single-navigation__post-title;
+			text-align: right;
+	}
+	&__post-title--next{
+		@extend .single-navigation__post-title;
+			text-align: left;
+	}
+}
+/*** read more ***/
+.read-more{
+	@extend .hidden-xs, .pull--right;
+	text-transform: uppercase;
+
+}
+/*** meta ***/
+.meta{
+	&__author-avatar--post-header{
+		@extend .hidden-xs, .col-sm-2;
+		img{
+			@extend .pull--right;
+			width: 70%;
+			border-radius: 50%;
+			margin: 0 auto;
+			@include respond-to(md-screen){
+				width: 50%;	
+			}			
+		}
+	}
+	&__data--post-header{
+		@extend .col-xs-12, .col-sm-10;
+		box-sizing: border-box;
+		padding: 0 15px $el__spacer--xs 15px;
+		border-bottom: $el__border;	
+	}
+}
+/*** alternative logo ***/
+.logo-alt{
+	@extend .hidden-xs;
+}
+/*** sub nav style ***/
+.sub-nav{
+	&--footer{
+		@extend .visible--desktop, .col-md-offset-4, .col-md-4;
+	}
+}

@@ -1,0 +1,27 @@
+.widget{
+	@extend .hidden-xs;
+	list-style: none;
+	margin-top: $el__spacer--md;
+	&--alpha{
+		@extend .widget;
+		margin-top: 0;
+	}
+	&--newsletter{
+		padding: em(24) em(26);
+		border: $el__border;
+		@include respond-to(md-screen){
+			margin-top: $el__spacer--md;
+			padding: 	em(12) em(18);
+		}
+	}
+	&__description{
+		@include leader(2);	
+	}
+	&__description--centered{
+		@extend .widget__description, .text-center;
+		@include leader(4);
+	}
+	&__form{
+		
+	}
+}

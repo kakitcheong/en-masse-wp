@@ -1,0 +1,234 @@
+@import "../fonts/ss-social/ss-social.css";
+@include establish-baseline;
+$default-rhythm-border-style: solid $color__border;
+////////////////////////////////////////////////////////////////////////////////
+//  typographic style                                                         //
+////////////////////////////////////////////////////////////////////////////////
+html{
+	@include adjust-leading-to(4);
+}
+/*** 1.1 heading styles ***/
+.h1, .h2, .h3{
+	font-family: $heading__font-family;
+	font-weight: 400;
+	color: $color__grey--dark;
+}
+.h1--opening{
+	@extend .h1;
+	@include adjust-font-size-to(28px);
+	@include respond-to(md-screen){
+		@include adjust-font-size-to(42px);
+	}
+}
+.h1--single-opening{
+	@extend .h1;
+	color: $color__grey--lighter;
+	@include adjust-font-size-to(22px);
+	@include respond-to(sm-screen){
+		@include adjust-font-size-to(28px);
+	}
+	@include respond-to(md-screen){
+		@include adjust-font-size-to(42px);
+		margin-top: $el__spacer--lg;	
+	}
+}
+.h2--hero{
+	@extend .h2;
+	color: $color__grey--lighter;
+	@include trailer(2);
+	@include respond-to(sm-screen){
+		@include adjust-font-size-to(32px);
+	}
+	@include respond-to(md-screen){
+		@include adjust-font-size-to(38px);
+		@include trailer();
+	}
+}
+.h2--lg{
+	@extend .h2;
+	@include adjust-font-size-to(22px);
+	@include leader();
+	@include trailer();
+	@include respond-to(md-screen){
+		@include adjust-font-size-to(32px);	
+	}	
+}
+.h3{
+	@include adjust-font-size-to(22px);
+	@include respond-to(md-screen){
+		@include adjust-font-size-to(24px);
+		@include adjust-leading-to(3);
+	}
+
+	&--accent, &--wht{
+		font-family: $secondary__font-family;
+		font-weight: 500;
+		color: $color__accent;
+		text-transform: uppercase;
+	}
+	&--popular{
+		@extend .h3;
+		color: $color__wht;
+		margin: 0 0 $el__spacer--xs 0;
+		@include respond-to(sm-screen){
+			@include adjust-font-size-to(18px);
+			margin: 0 0 0 0;
+			@include leader();
+			@include trailer(2);
+		}
+		@include respond-to(md-screen){
+			@include adjust-font-size-to(22px);
+			@include adjust-leading-to(3);
+		}
+	}
+	&--author-name{
+		@extend .h3;
+		@include adjust-font-size-to(18px);
+	}
+	&--author-name-meta{
+		@extend .h3--author-name;
+		@include adjust-font-size-to(22px);
+		text-transform: uppercase;
+		letter-spacing: em(1);
+		margin-bottom: $el__spacer--xs*0.3;
+	}
+	&--author-name-meta:before{
+		content: "by ";
+		text-transform: lowercase;
+		font-style: italic;
+		@include adjust-font-size-to(12px);
+		letter-spacing: 0;
+	}
+	&--carousel{
+		@extend .h3--author-name;
+	}
+}
+.h4{
+	font-family: $secondary__font-family;
+	@include adjust-font-size-to(14px);
+	letter-spacing: em(1);
+	&--reversed{
+		@extend .h4;
+		color: $color__reversed;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+	&--author-title{
+		@extend .h4;
+		font-family: $base__font-family;
+		color: $color__grey;
+		letter-spacing: 0;
+	}
+	&--author-handle{
+		@extend .h4;
+		@include adjust-font-size-to(12px);
+		color: $color__accent;
+		text-transform: uppercase;
+		letter-spacing: em(2);
+		//@include leader();		
+	}
+	&--author-handle:before{
+		content: "@";
+	}
+}
+.h4--alt{
+	@extend .h4;
+	font-family: $heading__font-family;
+	@include adjust-font-size-to(18px);
+	@include adjust-leading-to(3);
+	letter-spacing: 0; 
+}
+.section-title{
+	@extend .h4;
+	color: $color__accent;
+	text-transform: uppercase;
+	font-weight: 500;
+	margin-bottom: $el__spacer--xs;
+	&--centered{
+		@extend .section-title, .text-center;
+		position: relative;
+		@include respond-to(md-screen){
+			text-align: center;
+		}
+	}
+	&--centered:after{
+		content: " ";
+		background-color: $color__accent;
+		width: em(36);
+		height: em(1);
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: em(-10);
+		margin: 0 auto;
+	}
+	&--share{
+		@extend .section-title, .text-center;
+		@include respond-to(md-screen){
+			text-align: center;
+		}
+	}
+	&--no-spacer{
+		@extend .section-title;
+		margin-bottom: 0;
+	}
+}
+/*** 1.2 body text styles ***/
+.paragraph{
+	color: $color__grey;
+	font-family: $base__font-family;
+	font-weight: 400;
+	margin-top: $el__spacer--xs;
+	@include respond-to(md-screen){
+		@include adjust-font-size-to(14px);
+		@include adjust-leading-to(4.5);
+	}
+	&--footer{
+		@extend .paragraph;
+		color: $color__footer-text;
+	}
+	&--opening{
+		@extend .h3;
+		@include adjust-font-size-to(22px);
+		@include adjust-leading-to(3.5);
+	}    
+}
+.meta{
+	color: $color__grey--light;
+	@include adjust-font-size-to(12px);
+}
+.ss-icon{
+	padding: 0 $el__spacer--xs/4;
+	&:hover{
+		color: $color__accent;
+	}
+}
+/*** 1.3 blockquote ***/
+blockquote{
+	@extend .h3;
+	@include adjust-font-size-to(22px);
+	@include adjust-leading-to(3.5);
+	font-style: italic;
+	position: relative;
+	margin-top: $el__spacer--xs;
+	border-top: $el__border;
+	border-bottom: $el__border;
+	padding: $el__spacer--xs $el__spacer--xs $el__spacer--xs $el__spacer--md;
+	@include respond-to(md-screen){
+		padding: $el__spacer--sm 0 $el__spacer--sm*0.8 $el__spacer--lg;
+		margin-top: $el__spacer--sm;
+	}
+	&:before{
+		position: absolute;
+    top: -30px;
+    left: 0;
+    color: $color__grey--lighter;
+    @include respond-to(md-screen){
+    	content: '\201D';	
+    }
+    @include adjust-font-size-to(140px);
+    line-height: 1.1em;
+    font-style: normal;
+    text-rendering: auto;
+	}
+}

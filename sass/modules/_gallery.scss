@@ -1,0 +1,32 @@
+.gallery{
+	&__item{
+		float: left;
+	}
+	&__item--product{
+		@extend .gallery__item;
+		width: 30%;
+		height: em(60);
+		margin-top: $el__spacer--xs/2;
+		margin-right: 5%;
+		@include respond-to(lg-screen){
+			height: em(80);
+		}	
+	}
+	&__item--instagram{
+		@extend .gallery__item;
+		width: em(120);
+		height: em(120);
+		margin-right: 0;
+		@include respond-to(md-screen){
+			width: em(117.5);
+			height: em(117.5);
+		}
+		@include respond-to(lg-screen){
+			width: em(142.5);
+			height: em(142.5);
+		}
+	}
+}
+.gallery__omega{
+	margin-right: 0;
+}

@@ -1,0 +1,46 @@
+.hero-carousel{
+	@extend .hidden-xs, .col-sm-12;
+	box-sizing: border-box;
+	margin-top: $el__spacer--xs;
+	@include respond-to(md-screen){
+		margin-top: $el__spacer--sm;
+	}
+	&__item{
+		position: relative;
+	}
+}
+.hero-carousel-slide{
+	&__img{
+		height: em(320);
+		@include respond-to(md-screen){
+			height: em(240);
+		}
+	}
+	&__overlay{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		@include background-image(linear-gradient(rgba(0, 0, 0, 0.0) 20%, rgba(0, 0, 0, 0.7)));
+	}
+	&__container{
+		position: absolute;
+		left: 5%;
+		bottom: 5%;
+		width: 90%;
+		@include respond-to(md-screen){
+			//width: 90%;
+		}
+	}
+	&__post-category{
+		@include adjust-font-size-to(14px);
+		letter-spacing: em(1);
+	}
+	&__meta{
+		display: block;
+		color: $color__wht;
+		@include adjust-font-size-to(12px);
+		@include leading-border();
+	}
+}

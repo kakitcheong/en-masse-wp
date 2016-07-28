@@ -1,0 +1,65 @@
+.author{
+	margin-top: $el__spacer--xs;
+	&--opening{
+		margin-top: 0;
+		padding-bottom: $el__spacer--xs;
+		border-bottom: $el__border;
+		@include respond-to(sm-screen){
+			padding-bottom: $el__spacer--sm;
+		}
+	}
+	&--alpha{
+		@extend .author;
+			margin-top: 0;
+	}
+	&__avatar{
+		@extend .col-md-4;
+		box-sizing: border-box;
+		img{
+			width: 100%;
+			border-radius: 50%;
+		}
+	}
+	&__avatar--opening{
+		@extend .col-xs-4, .col-sm-2;
+		box-sizing: border-box;
+		img{
+			width: 100%;
+			border-radius: 50%;
+		}
+	}
+	&__profile{
+		@extend .col-md-8;
+	}
+	&__profile--opening{
+		@extend .col-xs-12, .col-sm-10;
+	}
+	&__name--opening{
+		display: inline-block;
+	}
+	&__title--opening{
+		display: inline-block;
+		margin-left: $el__spacer--xs*0.5;
+		.h4--author-title{
+			color: $color__accent;
+		}
+	}
+	&__email--opening{
+		font-family: $heading__font-family;
+		font-style: italic; 
+	}
+	&__social{
+		margin-top: $el__spacer--xs/2;
+	}
+}
+.author--main{
+	&__avatar{
+		img{
+			width: 100%;
+			border-radius: 50%;
+		}
+	}
+	&__profile{
+		@extend .pull--center;
+	}
+}

@@ -1,0 +1,22 @@
+.mega-dropdown{
+	@extend .dropdown;
+	position: static !important;
+	&__toggle{
+		@extend .dropdown-toggle;
+	}
+	&__menu{
+		@extend .dropdown-menu, .hidden-xs, .hidden-sm;
+		padding: em(12) 0 em(36) 0;
+    	width: 100%;
+    	border: none;
+    	top: 0;
+    	@include box-shadow(none);
+	}
+	&__item{
+		@extend .col-md-2;
+	}
+	&__item--carousel{
+		@extend .col-md-10;
+		border-left: $el__border;
+	}
+}

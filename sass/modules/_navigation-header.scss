@@ -1,0 +1,71 @@
+.navigation-header{
+	margin-top: $el__spacer--xs;
+	@include respond-to(md-screen){
+		padding: $el__spacer--xs*0.8 0;
+		border-bottom: $el__border;
+		margin-top: 0;	
+	}
+	&__toggle{
+		@extend .pull--left, .visible--mobile, .navbar-toggle;
+		padding: em(6) em(3);
+		border: none;
+		@include border-radius(0, 0);
+		margin:0;
+		@include respond-to(sm-screen){
+			display: block;
+		}
+		.icon-bar{
+			width: 26px;
+			height: 2px;
+			background-color: $color__grey--light;
+			@include border-radius(0, 0);
+			@include transition(all, 0.4s, ease-in-out);
+		}
+		.top-bar {
+	    transform: rotate(45deg);
+	    transform-origin: 0 10%;
+	  }
+	  .middle-bar {
+	    opacity: 0;
+	  }
+	  .bottom-bar {
+	    transform: rotate(-45deg);
+	    transform-origin: 0 90%;
+	  }
+	}
+	&__soical{
+		@extend .visible--desktop, .pull--center;
+		display: inline-block;
+		@include adjust-font-size-to(13px);
+		color: $color__grey--light;
+		text-transform: uppercase; 
+	}
+	&__masthead{
+		@extend .pull--center;
+		margin-top: $el__spacer--xs;
+		@include respond-to(md-screen){
+			margin-top: $el__spacer--sm;
+		}
+		@include respond-to(lg-screen){
+			margin-top: $el__spacer--sm;
+		}
+	}
+	&__cart{
+		@extend .pull--right;
+		color: $color__grey--light;
+		font-family: $secondary__font-family;
+		@include adjust-font-size-to(14px);
+		text-transform: uppercase;
+	}
+}
+.navigation-header__toggle.collapsed{
+	.top-bar{
+		transform: rotate(0);
+	}
+	.middle-bar{
+		opacity: 1;
+	}
+	.bottom-bar{
+		transform: rotate(0);
+	}
+}

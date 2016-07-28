@@ -1,0 +1,35 @@
+@import '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
+@import 'compass';
+@include global-reset;
+/*** return em ***/
+$browser-context: 16;
+@function em($pixels, $context: $browser-context){
+	@if (unitless($pixels)){
+		$pixels: $pixels * 1px;
+	}
+	@if (unitless($context)) {
+		$context: $context * 1px;
+	}
+	@return $pixels / $context * 1em;
+}
+/****** media queries mixin ******/
+/*** break points ***/
+$breakPt--sm: em(768);
+$breakPt--md: em(992);
+$breakPt--lg: em(1200);
+/*** mixin ***/
+@mixin respond-to($media){
+	@if $media == sm-screen{
+		@media only screen and (min-width: $breakPt--sm){
+			@content;
+		}
+	} @else if $media == md-screen{
+		@media only screen and (min-width: $breakPt--md){
+			@content;
+		}
+	} @else if $media == lg-screen{
+		@media only screen and (min-width: $breakPt--lg){
+			@content;
+		}
+	}
+}
