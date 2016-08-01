@@ -9,9 +9,9 @@
 	@extend .container;
 }
 .carousel--author, .featured-products{
-	@extend .col-xs-12, .col-sm-offset-1, .col-sm-10, .col-lg-offset-2, .col-lg-8;
+	@extend .col-xs-12, .col-sm-12, .col-md-offset-1, .col-md-10;
 	@include respond-to(sm-screen){
-		margin-top: $el__spacer--md;
+		margin-top: $el__spacer--sm;
 	}
 }
 .latest-articles{

@@ -34,14 +34,18 @@ html{
 }
 .h2--hero{
 	@extend .h2;
-	color: $color__grey--lighter;
+	color: $color__wht;
 	@include trailer(2);
+	z-index: 110;
 	@include respond-to(sm-screen){
-		@include adjust-font-size-to(32px);
+		@include adjust-font-size-to(24px);
 	}
 	@include respond-to(md-screen){
-		@include adjust-font-size-to(38px);
+		@include adjust-font-size-to(26px);
 		@include trailer();
+	}
+	&--hidden{
+		@extend .h2--hero;
 	}
 }
 .h2--lg{
@@ -162,6 +166,12 @@ html{
 		bottom: em(-10);
 		margin: 0 auto;
 	}
+	&--comments-area{
+		@extend .section-title;
+		padding-top: $el__spacer--xs;
+		margin-bottom: $el__spacer--xs;
+		border-top: $el__border;
+	}
 	&--share{
 		@extend .section-title, .text-center;
 		@include respond-to(md-screen){
@@ -191,7 +201,12 @@ html{
 		@extend .h3;
 		@include adjust-font-size-to(22px);
 		@include adjust-leading-to(3.5);
-	}    
+	}
+	&--hero{
+		@extend .paragraph;
+		@include adjust-leading-to(3);
+		color: $color__wht;
+	}
 }
 .meta{
 	color: $color__grey--light;

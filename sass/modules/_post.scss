@@ -12,7 +12,7 @@
 	}
 	// image on hover interaction
 	&__img-overlay{
-		z-index: 98;
+		z-index: 50;
 		width: 100%;
 		height: 100%;
 		background-color: rgba(0, 0, 0, 0.2);
@@ -203,11 +203,18 @@
 			margin-top: $el__spacer--md;	
 		}
 	}
+	&__comments-area{
+		@extend .col-xs-12;
+		padding-bottom: $el__spacer--sm;
+		margin-top: $el__spacer--sm;
+		border-bottom: $el__border;
+		@include respond-to(md-screen){
+			margin-top: $el__spacer--md;	
+		}
+	}
 	&__social-share{
 		@extend .col-xs-12;
 		margin-top: $el__spacer--sm;
-		padding-bottom: $el__spacer--sm;
-		border-bottom: $el__border;
 		@include respond-to(md-screen){
 			margin-top: $el__spacer--md;	
 		}
@@ -233,3 +240,4 @@
 		border-top: none;
 	}	
 }
+/*** hero posts - opening - added 20170728 - see /hero-gird/ ***/

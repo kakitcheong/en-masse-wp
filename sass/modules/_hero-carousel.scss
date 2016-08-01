@@ -1,10 +1,6 @@
 .hero-carousel{
 	@extend .hidden-xs, .col-sm-12;
 	box-sizing: border-box;
-	margin-top: $el__spacer--xs;
-	@include respond-to(md-screen){
-		margin-top: $el__spacer--sm;
-	}
 	&__item{
 		position: relative;
 	}

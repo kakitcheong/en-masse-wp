@@ -13,24 +13,81 @@
  */
 
 get_header(); ?>
-<section class="hero-post">
-	
-</section> <!-- /.hero-post -->
+<!-- added compoents 20160728 -->
+<section class="hero-grid">
+	<?php
+    	$args = array(
+			'showposts' => 4,
+			//'category_name' => $cat_name[$i],
+			//'post__in'  => get_option( 'sticky_posts' ),
+			//'ignore_sticky_posts' => 1
+		);
+		$query = new WP_Query($args);
+		if ($query->have_posts()) : $counter = 0; 
+			while ($query->have_posts()) : $query->the_post(); 
+	?>
+		<?php if ($counter == 0) : ?>
+			<article class="hero-grid__item hero-grid__item--sm bg__img">
+				<div class="post__img-overlay">
+		        	<img src="<?php echo the_post_thumbnail_url("full"); ?>" alt="hero-article-img-001">    
+		        </div> <!-- /.post__img-overlay -->
+		        <?php the_title('<h2 class="h2--hero"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>'); ?>
+		        <p class="paragraph--hero post--hero__excerpt"><?php echo custom_excerpts(30); ?></p>
+				<!-- <div class="hero-grid__item__overlay"></div> -->
+			</article> <!-- /.hero-grid__item--sm -->
+		<?php elseif ($counter == 1) : ?>
+			<article class="hero-grid__item hero-grid__item--lg bg__img">
+				<div class="post__img-overlay">
+		        	<img src="<?php echo the_post_thumbnail_url("full"); ?>" alt="hero-article-img-002">    
+		        </div> <!-- /.post__img-overlay --> 
+		        <?php the_title('<h2 class="h2--hero--hidden"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>'); ?>
+		        <p class="paragraph--hero post--hero__excerpt--hidden"><?php echo custom_excerpts(40); ?></p>
+				<div class="hero-grid__item__overlay"></div>
+			</article> <!-- /.hero-grid__itme--lg -->
+		<?php elseif($counter == 2) : ?>
+			<article class="hero-grid__item hero-grid__item--lg bg__img">
+				<div class="post__img-overlay">
+		        	<img src="<?php echo the_post_thumbnail_url("full"); ?>" alt="hero-article-img-003">
+		        </div> <!-- /.post__img-overlay --> 
+		        <?php the_title('<h2 class="h2--hero--hidden"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>'); ?>
+		        <p class="paragraph--hero post--hero__excerpt--hidden"><?php echo custom_excerpts(40); ?></p>
+				<div class="hero-grid__item__overlay"></div>
+			</article> <!-- /.hero-grid__itme--lg -->
+		<?php elseif($counter == 3) : ?>
+			<article class="hero-grid__item hero-grid__item--sm bg__img">
+				<div class="post__img-overlay">
+		        	<img src="<?php echo the_post_thumbnail_url("full"); ?>" alt="hero-article-img-003">
+		        </div> <!-- /.post__img-overlay -->
+		        <?php the_title('<h2 class="h2--hero"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>'); ?>
+		        <p class="paragraph--hero post--hero__excerpt"><?php echo custom_excerpts(30); ?></p>
+				<!-- <div class="hero-grid__item__overlay"></div> -->
+			</article> <!-- /.hero-grid__item--sm -->	 
+		<?php endif; $counter++;?>	
+	<?php
+			endwhile;
+			wp_reset_postdata();
+		endif;
+	?>	 
+</section> <!-- /.hero-grid -->
 <section class="feature-posts">
     <div class="row">
             <div class="hero-carousel">
             	<!-- replace display method here from first sticky post in each category to popular post -->
             	<?php
-					$cat_name = array('trending', 'lifestyle', 'art_design', 'fashion');
-					for ($i = 0; $i < count($cat_name); $i++) :
+					//$cat_name = array('trending', 'lifestyle', 'art_design', 'fashion');
+					//for ($i = 0; $i < count($cat_name); $i++) :
 				    	$args = array(
-							'posts_per_page' => 1,
-							'category_name' => $cat_name[$i],
+							'posts_per_page' => 5,
+							//'showposts' => 4
+							//'category_name' => $cat_name[$i],
 							//'post__in'  => get_option( 'sticky_posts' ),
 							//'ignore_sticky_posts' => 1
+							'meta_key' => 'wpb_post_views_count', 
+							'orderby' => 'meta_value_num', 
+							'order' => 'DESC'
 						);
-						$query = new WP_Query($args);
-						while ($query->have_posts()) : $query->the_post();
+						$popularPosts = new WP_Query($args);
+						while ($popularPosts->have_posts()) : $popularPosts->the_post();
 							$categories = get_the_category(); ?>
 							<div class="hero-carousel__item">
 			                    <div class="hero-carousel-slide">
@@ -77,7 +134,7 @@ get_header(); ?>
 						<?php	
 						endwhile;
 						wp_reset_postdata();	
-					endfor; 
+					//endfor; 
 				?>
             </div> <!-- /.hero-carousel -->
     </div> <!-- /.row -->
@@ -113,7 +170,6 @@ get_header(); ?>
 					get_template_part( 'template-parts/content', 'none' );
 				endif;
 			?>
-			
 		</div> <!-- .row -->
 	</section> <!-- /.latest-articles -->
 	<aside class="aside">

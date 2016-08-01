@@ -4,11 +4,17 @@
 
 .is__sticky{
 	position: fixed;
-	background-color: $color__wht;
+	background-color: rgba(0, 0, 0, 0) ;
 	width: 100%;
 	left: 0;
 	top: 0;
 	z-index: 100;
 	border-top: none;
+	//min-height: 300px;
+	border-bottom: none;
 	margin-top: 0;
+}
+
+.is__sticky.is__logged-in{
+	padding-top: 32px; // wordpress panel overwrite
 }

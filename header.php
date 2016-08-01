@@ -58,42 +58,39 @@
                         </picture>
                     </a>
                 </div> <!-- /.navigation-header__masthead -->
-                <ul class="main-navigation">
+                <ul class="main-navigation <?php if (is_user_logged_in()){ echo "is__logged-in";} ?>">
+                    <div class="main-navigation__wrapper">
                     <?php
                         $locations = get_nav_menu_locations();
-                        if ( isset( $locations[ 'mega_menu' ] ) ) {
-                            $menu = get_term( $locations[ 'mega_menu' ], 'nav_menu' );
-                            if ( $items = wp_get_nav_menu_items( $menu->name ) ) {
+                        if ( isset( $locations[ "mega_menu" ] ) ) {
+                            $menu = get_term( $locations[ "mega_menu" ], "nav_menu" );
+                            if ( $items = wp_get_nav_menu_items( $menu->name ) ) {  
+                                $idCollection = [];
+                                $counter = 0;
                                 foreach ( $items as $item ) {
+                                    $idCollection[$counter] = "$item->ID";
                                     echo "<li class='main-navigation__item mega-dropdown'>";
-                                        echo "<a class='main-navigation__link mega-dropdown__toggle' href=\"{$item->url}\">{$item->title}</a>";
-                                        if ( is_active_sidebar( 'mega-menu-widget-area-' . $item->ID ) ) {
-                                            echo "<ul class=\"mega-dropdown__menu\">";
+                                        echo "<a class=\"main-navigation__link mega-dropdown__toggle {$item->ID}\" href=\"{$item->url}\">{$item->title}</a>";
+                                        if ( is_active_sidebar( "mega-menu-widget-area-" . $item->ID ) ) {
+                                            echo "<ul class=\"mega-dropdown__menu {$item->ID}\">";
                                             echo "<div class=\"container\">";
-                                            echo "<li class=\"mega-dropdown__item\">";
+                                            echo "<li>";
                                             echo "<div id=\"mega-menu-{$item->ID}\" class=\"mega-menu\">";
                                                 dynamic_sidebar( 'mega-menu-widget-area-' . $item->ID );
                                             echo "</div>";
                                             echo "</li>";
-                                            echo "</div>";
+                                            echo "</div>"; 
                                             echo "</ul>";
                                         }
                                     echo "</li>";
+                                    $counter++;
                                 }
+                                wp_localize_script( 'en-masse-magazine-main-script', 'idCollection', $idCollection );
                             }
                         }
                     ?>
+                    </div>  <!-- /.main-navigation__wrapper -->
                 </ul>
-                <?php /* Primary navigation */
-                    /*
-                    wp_nav_menu( array(
-                      'menu' => 'Main Nav Menu',
-                      'depth' => 1,
-                      'container' => false,
-                      'items_wrap' => '<ul class="main-navigation">%3$s</ul>')
-                    );
-                    */
-                ?>
             </nav> <!-- /.header__navigation -->
     </header> <!-- /.header -->
     <main class="main">

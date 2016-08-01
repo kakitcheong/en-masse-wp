@@ -237,6 +237,21 @@ function widget_first_last_classes($params) {
 }
 add_filter('dynamic_sidebar_params','widget_first_last_classes');
 
+/**
+ * Filter the except length to 20 characters.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+function wpdocs_custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+function custom_excerpts($limit) {
+    return wp_trim_words(get_the_excerpt(), $limit, '<a href="'. esc_url( get_permalink() ) . '">' . '&nbsp;&hellip;' . __( 'Read more &nbsp;&raquo;', ' ' ) . '</a>');
+}
+
 function wpmm_setup() {
     register_nav_menus( array(
         'mega_menu' => 'Mega Menu'
@@ -256,6 +271,8 @@ function wpmm_init() {
                     register_sidebar( array(
                         'id'   => 'mega-menu-widget-area-' . $item->ID,
                         'name' => $item->title . ' - Mega Menu',
+                        'before_widget' => ' ',
+						'after_widget'  => ' ',
                     ) );
                 }
             }
@@ -263,3 +280,49 @@ function wpmm_init() {
     }
 }
 add_action( 'widgets_init', 'wpmm_init' );
+
+// popular post by view count functions
+function wpb_set_post_views($postID) {
+    $count_key = 'wpb_post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        $count = 0;
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+    }else{
+        $count++;
+        update_post_meta($postID, $count_key, $count);
+    }
+}
+//To keep the count accurate, lets get rid of prefetching
+remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+
+function wpb_track_post_views ($post_id) {
+    if ( !is_single() ) return;
+    if ( empty ( $post_id) ) {
+        global $post;
+        $post_id = $post->ID;    
+    }
+    wpb_set_post_views($post_id);
+}
+add_action( 'wp_head', 'wpb_track_post_views');
+
+function wpb_get_post_views($postID){
+    $count_key = 'wpb_post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+        return "0 View";
+    }
+    return $count.' Views';
+}
+
+function enable_threaded_comments(){
+if (!is_admin()) {
+     if (is_singular() && comments_open() && (get_option('thread_comments') == 1))
+          wp_enqueue_script('comment-reply');
+     }
+}
+
+add_action('get_header', 'enable_threaded_comments');

@@ -53,7 +53,7 @@
         <?php the_title('<h3 class="h3"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h3>'); ?>  
     </div> <!-- /.post__title -->
     <p class="post__excerpt">
-    	<?php echo get_the_excerpt(); ?>
+    	<?php echo custom_excerpts(30); ?>
     </p> <!-- /.post__excerpt -->
     <div class="post__meta">
         <iron-icon src="<?php echo get_template_directory_uri() ?>/images/global/icons/clock-16px.svg"></iron-icon>&nbsp;

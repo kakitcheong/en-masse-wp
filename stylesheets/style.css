@@ -340,10 +340,11 @@ th {
   }
 
   /* line 77, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_print.scss */
-  .btn > .caret, .btn--default > .caret, .btn--primary > .caret,
+  .btn > .caret, .btn--default > .caret, .btn--primary > .caret, .form-submit .submit > .caret,
   .dropup > .btn > .caret,
   .dropup > .btn--default > .caret,
-  .dropup > .btn--primary > .caret {
+  .dropup > .btn--primary > .caret,
+  .form-submit .dropup > .submit > .caret {
     border-top-color: #000 !important;
   }
 
@@ -1923,7 +1924,7 @@ mark,
 }
 
 /* line 94, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
-.text-center, .section-title--centered, .section-title--share, .pull--center, .center, .center__btn, .navigation-header__soical, .navigation-header__masthead, .main-navigation, .footer__social, .footer-copy, .card, .author--main__profile, .pagination__item, .pagination__item--active, .pagination__item--next, .widget__description--centered, .btn, .btn--default, .btn--primary {
+.text-center, .section-title--centered, .section-title--share, .pull--center, .center, .center__btn, .navigation-header__soical, .navigation-header__masthead, .main-navigation, .footer__social, .footer-copy, .card, .author--main__profile, .pagination__item, .pagination__item--active, .pagination__item--next, .widget__description--centered, .btn, .btn--default, .btn--primary, .form-submit .submit {
   text-align: center;
 }
 
@@ -2207,6 +2208,7 @@ blockquote.pull-right,
 blockquote.pull--right,
 blockquote.navigation-header__cart,
 blockquote.video-bar__ext-link,
+blockquote.comment-metadata,
 blockquote.read-more {
   padding-right: 15px;
   padding-left: 0;
@@ -2222,16 +2224,19 @@ blockquote.pull-right footer:before,
 blockquote.pull--right footer:before,
 blockquote.navigation-header__cart footer:before,
 blockquote.video-bar__ext-link footer:before,
+blockquote.comment-metadata footer:before,
 blockquote.read-more footer:before,
 blockquote.pull-right small:before,
 blockquote.pull--right small:before,
 blockquote.navigation-header__cart small:before,
 blockquote.video-bar__ext-link small:before,
+blockquote.comment-metadata small:before,
 blockquote.read-more small:before,
 blockquote.pull-right .small:before,
 blockquote.pull--right .small:before,
 blockquote.navigation-header__cart .small:before,
 blockquote.video-bar__ext-link .small:before,
+blockquote.comment-metadata .small:before,
 blockquote.read-more .small:before {
   content: '';
 }
@@ -2243,16 +2248,19 @@ blockquote.pull-right footer:after,
 blockquote.pull--right footer:after,
 blockquote.navigation-header__cart footer:after,
 blockquote.video-bar__ext-link footer:after,
+blockquote.comment-metadata footer:after,
 blockquote.read-more footer:after,
 blockquote.pull-right small:after,
 blockquote.pull--right small:after,
 blockquote.navigation-header__cart small:after,
 blockquote.video-bar__ext-link small:after,
+blockquote.comment-metadata small:after,
 blockquote.read-more small:after,
 blockquote.pull-right .small:after,
 blockquote.pull--right .small:after,
 blockquote.navigation-header__cart .small:after,
 blockquote.video-bar__ext-link .small:after,
+blockquote.comment-metadata .small:after,
 blockquote.read-more .small:after {
   content: '\00A0 \2014';
 }
@@ -2396,7 +2404,7 @@ pre code {
 }
 
 /* line 11, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .author__avatar--opening, .meta__author-avatar--post-header, .col-md-2, .mega-dropdown__item, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .aside, .col-lg-3, .col-xs-4, .author__avatar--opening, .col-sm-4, .post--sm, .video-bar__thumbnail, .form--footer, .col-md-4, .about--footer, .author__avatar, .sub-nav--footer, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .about--footer, .post, .post-content__img, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .author__profile, .col-lg-8, .carousel--author, .featured-products, .col-xs-9, .col-sm-9, .col-md-9, .latest-articles, .post-content, .col-lg-9, .col-xs-10, .col-sm-10, .carousel--author, .featured-products, .post-content__text, .author__profile--opening, .meta__data--post-header, .col-md-10, .mega-dropdown__item--carousel, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .carousel--author, .featured-products, .latest-articles, .aside, .instagram-feed, .about--footer, .post, .post--lg, .post--lg--alpha, .post--sm, .post-opening, .post-content, .post-content__text, .post-content__img, .post-content__img--lg, .post-content__gallery, .post-content__social-share, .post-content__navigation, .related-posts, .author__profile--opening, .video-bar, .video-bar__thumbnail, .load-more, .form--footer, .meta__data--post-header, .col-sm-12, .hero-carousel, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .author__avatar--opening, .meta__author-avatar--post-header, .col-md-2, .mega-dropdown__item, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .aside, .col-lg-3, .col-xs-4, .author__avatar--opening, .col-sm-4, .post--sm, .video-bar__thumbnail, .form--footer, .col-md-4, .about--footer, .hero-grid__item--sm, .author__avatar, .sub-nav--footer, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .comment-form-author, .comment-form-email, .comment-form-url, .form-submit, .col-sm-6, .about--footer, .post, .post-content__img, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .hero-grid__item--lg, .author__profile, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .latest-articles, .post-content, .col-lg-9, .col-xs-10, .col-sm-10, .post-content__text, .author__profile--opening, .meta__data--post-header, .col-md-10, .carousel--author, .featured-products, .mega-dropdown__item--carousel, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .carousel--author, .featured-products, .latest-articles, .aside, .instagram-feed, .about--footer, .post, .post--lg, .post--lg--alpha, .post--sm, .post-opening, .post-content, .post-content__text, .post-content__img, .post-content__img--lg, .post-content__gallery, .post-content__comments-area, .post-content__social-share, .post-content__navigation, .related-posts, .author__profile--opening, .video-bar, .video-bar__thumbnail, .load-more, .form--footer, .comment-form-comment, .meta__data--post-header, .col-sm-12, .carousel--author, .featured-products, .hero-carousel, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -2404,7 +2412,7 @@ pre code {
 }
 
 /* line 27, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .author__avatar--opening, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .carousel--author, .featured-products, .latest-articles, .aside, .instagram-feed, .about--footer, .post, .post--lg, .post--lg--alpha, .post--sm, .post-opening, .post-content, .post-content__text, .post-content__img, .post-content__img--lg, .post-content__gallery, .post-content__social-share, .post-content__navigation, .related-posts, .author__profile--opening, .video-bar, .video-bar__thumbnail, .load-more, .form--footer, .meta__data--post-header {
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .author__avatar--opening, .col-xs-5, .col-xs-6, .comment-form-author, .comment-form-email, .comment-form-url, .form-submit, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .carousel--author, .featured-products, .latest-articles, .aside, .instagram-feed, .about--footer, .post, .post--lg, .post--lg--alpha, .post--sm, .post-opening, .post-content, .post-content__text, .post-content__img, .post-content__img--lg, .post-content__gallery, .post-content__comments-area, .post-content__social-share, .post-content__navigation, .related-posts, .author__profile--opening, .video-bar, .video-bar__thumbnail, .load-more, .form--footer, .comment-form-comment, .meta__data--post-header {
   float: left;
 }
 
@@ -2434,7 +2442,7 @@ pre code {
 }
 
 /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-.col-xs-6 {
+.col-xs-6, .comment-form-author, .comment-form-email, .comment-form-url, .form-submit {
   width: 50%;
 }
 
@@ -2464,7 +2472,7 @@ pre code {
 }
 
 /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-.col-xs-12, .carousel--author, .featured-products, .latest-articles, .aside, .instagram-feed, .about--footer, .post, .post--lg, .post--lg--alpha, .post--sm, .post-opening, .post-content, .post-content__text, .post-content__img, .post-content__img--lg, .post-content__gallery, .post-content__social-share, .post-content__navigation, .related-posts, .author__profile--opening, .video-bar, .video-bar__thumbnail, .load-more, .form--footer, .meta__data--post-header {
+.col-xs-12, .carousel--author, .featured-products, .latest-articles, .aside, .instagram-feed, .about--footer, .post, .post--lg, .post--lg--alpha, .post--sm, .post-opening, .post-content, .post-content__text, .post-content__img, .post-content__img--lg, .post-content__gallery, .post-content__comments-area, .post-content__social-share, .post-content__navigation, .related-posts, .author__profile--opening, .video-bar, .video-bar__thumbnail, .load-more, .form--footer, .comment-form-comment, .meta__data--post-header {
   width: 100%;
 }
 
@@ -2665,7 +2673,7 @@ pre code {
 
 @media (min-width: 768px) {
   /* line 27, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-sm-1, .col-sm-2, .author__avatar--opening, .meta__author-avatar--post-header, .col-sm-3, .col-sm-4, .post--sm, .video-bar__thumbnail, .form--footer, .col-sm-5, .col-sm-6, .about--footer, .post, .post-content__img, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .carousel--author, .featured-products, .post-content__text, .author__profile--opening, .meta__data--post-header, .col-sm-11, .col-sm-12, .hero-carousel {
+  .col-sm-1, .col-sm-2, .author__avatar--opening, .meta__author-avatar--post-header, .col-sm-3, .col-sm-4, .post--sm, .video-bar__thumbnail, .form--footer, .col-sm-5, .col-sm-6, .about--footer, .post, .post-content__img, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .post-content__text, .author__profile--opening, .meta__data--post-header, .col-sm-11, .col-sm-12, .carousel--author, .featured-products, .hero-carousel {
     float: left;
   }
 
@@ -2715,7 +2723,7 @@ pre code {
   }
 
   /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-sm-10, .carousel--author, .featured-products, .post-content__text, .author__profile--opening, .meta__data--post-header {
+  .col-sm-10, .post-content__text, .author__profile--opening, .meta__data--post-header {
     width: 83.33333%;
   }
 
@@ -2725,7 +2733,7 @@ pre code {
   }
 
   /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-sm-12, .hero-carousel {
+  .col-sm-12, .carousel--author, .featured-products, .hero-carousel {
     width: 100%;
   }
 
@@ -2865,7 +2873,7 @@ pre code {
   }
 
   /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-sm-offset-1, .carousel--author, .featured-products, .post-content__text {
+  .col-sm-offset-1, .post-content__text {
     margin-left: 8.33333%;
   }
 
@@ -2926,7 +2934,7 @@ pre code {
 }
 @media (min-width: 992px) {
   /* line 27, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-md-1, .col-md-2, .mega-dropdown__item, .col-md-3, .aside, .col-md-4, .about--footer, .author__avatar, .sub-nav--footer, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .author__profile, .col-md-9, .latest-articles, .post-content, .col-md-10, .mega-dropdown__item--carousel, .col-md-11, .col-md-12 {
+  .col-md-1, .col-md-2, .mega-dropdown__item, .col-md-3, .aside, .col-md-4, .about--footer, .hero-grid__item--sm, .author__avatar, .sub-nav--footer, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .hero-grid__item--lg, .author__profile, .col-md-9, .latest-articles, .post-content, .col-md-10, .carousel--author, .featured-products, .mega-dropdown__item--carousel, .col-md-11, .col-md-12 {
     float: left;
   }
 
@@ -2946,7 +2954,7 @@ pre code {
   }
 
   /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-md-4, .about--footer, .author__avatar, .sub-nav--footer {
+  .col-md-4, .about--footer, .hero-grid__item--sm, .author__avatar, .sub-nav--footer {
     width: 33.33333%;
   }
 
@@ -2966,7 +2974,7 @@ pre code {
   }
 
   /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-md-8, .author__profile {
+  .col-md-8, .hero-grid__item--lg, .author__profile {
     width: 66.66667%;
   }
 
@@ -2976,7 +2984,7 @@ pre code {
   }
 
   /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-md-10, .mega-dropdown__item--carousel {
+  .col-md-10, .carousel--author, .featured-products, .mega-dropdown__item--carousel {
     width: 83.33333%;
   }
 
@@ -3126,7 +3134,7 @@ pre code {
   }
 
   /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-md-offset-1 {
+  .col-md-offset-1, .carousel--author, .featured-products {
     margin-left: 8.33333%;
   }
 
@@ -3187,7 +3195,7 @@ pre code {
 }
 @media (min-width: 1200px) {
   /* line 27, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .carousel--author, .featured-products, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
     float: left;
   }
 
@@ -3227,7 +3235,7 @@ pre code {
   }
 
   /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-lg-8, .carousel--author, .featured-products {
+  .col-lg-8 {
     width: 66.66667%;
   }
 
@@ -3392,7 +3400,7 @@ pre code {
   }
 
   /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-lg-offset-2, .carousel--author, .featured-products {
+  .col-lg-offset-2 {
     margin-left: 16.66667%;
   }
 
@@ -3797,7 +3805,7 @@ output {
 }
 
 /* line 114, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-.form-control {
+.form-control, .comment-form-comment textarea, .comment-form-author input, .comment-form-email input, .comment-form-url input {
   display: block;
   width: 100%;
   height: 34px;
@@ -3816,42 +3824,42 @@ output {
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 /* line 57, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
-.form-control:focus {
+.form-control:focus, .comment-form-comment textarea:focus, .comment-form-author input:focus, .comment-form-email input:focus, .comment-form-url input:focus {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 /* line 103, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_vendor-prefixes.scss */
-.form-control::-moz-placeholder {
+.form-control::-moz-placeholder, .comment-form-comment textarea::-moz-placeholder, .comment-form-author input::-moz-placeholder, .comment-form-email input::-moz-placeholder, .comment-form-url input::-moz-placeholder {
   color: #999;
   opacity: 1;
 }
 /* line 107, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_vendor-prefixes.scss */
-.form-control:-ms-input-placeholder {
+.form-control:-ms-input-placeholder, .comment-form-comment textarea:-ms-input-placeholder, .comment-form-author input:-ms-input-placeholder, .comment-form-email input:-ms-input-placeholder, .comment-form-url input:-ms-input-placeholder {
   color: #999;
 }
 /* line 108, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_vendor-prefixes.scss */
-.form-control::-webkit-input-placeholder {
+.form-control::-webkit-input-placeholder, .comment-form-comment textarea::-webkit-input-placeholder, .comment-form-author input::-webkit-input-placeholder, .comment-form-email input::-webkit-input-placeholder, .comment-form-url input::-webkit-input-placeholder {
   color: #999;
 }
 /* line 136, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-.form-control::-ms-expand {
+.form-control::-ms-expand, .comment-form-comment textarea::-ms-expand, .comment-form-author input::-ms-expand, .comment-form-email input::-ms-expand, .comment-form-url input::-ms-expand {
   border: 0;
   background-color: transparent;
 }
 /* line 146, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+.form-control[disabled], .comment-form-comment textarea[disabled], .comment-form-author input[disabled], .comment-form-email input[disabled], .comment-form-url input[disabled], .form-control[readonly], .comment-form-comment textarea[readonly], .comment-form-author input[readonly], .comment-form-email input[readonly], .comment-form-url input[readonly], fieldset[disabled] .form-control, fieldset[disabled] .comment-form-comment textarea, .comment-form-comment fieldset[disabled] textarea, fieldset[disabled] .comment-form-author input, .comment-form-author fieldset[disabled] input, fieldset[disabled] .comment-form-email input, .comment-form-email fieldset[disabled] input, fieldset[disabled] .comment-form-url input, .comment-form-url fieldset[disabled] input {
   background-color: #eeeeee;
   opacity: 1;
 }
 /* line 153, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-.form-control[disabled], fieldset[disabled] .form-control {
+.form-control[disabled], .comment-form-comment textarea[disabled], .comment-form-author input[disabled], .comment-form-email input[disabled], .comment-form-url input[disabled], fieldset[disabled] .form-control, fieldset[disabled] .comment-form-comment textarea, .comment-form-comment fieldset[disabled] textarea, fieldset[disabled] .comment-form-author input, .comment-form-author fieldset[disabled] input, fieldset[disabled] .comment-form-email input, .comment-form-email fieldset[disabled] input, fieldset[disabled] .comment-form-url input, .comment-form-url fieldset[disabled] input {
   cursor: not-allowed;
 }
 
 /* line 162, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-textarea.form-control {
+textarea.form-control, .comment-form-comment textarea {
   height: auto;
 }
 
@@ -3862,67 +3870,102 @@ input[type="search"] {
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   /* line 193, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-  input[type="date"].form-control,
+  input[type="date"].form-control, .comment-form-author input[type="date"], .comment-form-email input[type="date"], .comment-form-url input[type="date"],
   input[type="time"].form-control,
+  .comment-form-author input[type="time"],
+  .comment-form-email input[type="time"],
+  .comment-form-url input[type="time"],
   input[type="datetime-local"].form-control,
-  input[type="month"].form-control {
+  .comment-form-author input[type="datetime-local"],
+  .comment-form-email input[type="datetime-local"],
+  .comment-form-url input[type="datetime-local"],
+  input[type="month"].form-control,
+  .comment-form-author input[type="month"],
+  .comment-form-email input[type="month"],
+  .comment-form-url input[type="month"] {
     line-height: 34px;
   }
   /* line 197, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-  input[type="date"].input-sm, .input-group-sm > input[type="date"].form-control,
+  input[type="date"].input-sm, .input-group-sm > input[type="date"].form-control, .comment-form-author .input-group-sm > input[type="date"], .comment-form-email .input-group-sm > input[type="date"], .comment-form-url .input-group-sm > input[type="date"],
   .input-group-sm > input[type="date"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="date"].btn,
   .input-group-sm > .input-group-btn > input[type="date"].btn--default,
-  .input-group-sm > .input-group-btn > input[type="date"].btn--primary, .input-group-sm input[type="date"],
+  .input-group-sm > .input-group-btn > input[type="date"].btn--primary,
+  .form-submit .input-group-sm > .input-group-btn > input[type="date"].submit, .input-group-sm input[type="date"],
   input[type="time"].input-sm,
   .input-group-sm > input[type="time"].form-control,
+  .comment-form-author .input-group-sm > input[type="time"],
+  .comment-form-email .input-group-sm > input[type="time"],
+  .comment-form-url .input-group-sm > input[type="time"],
   .input-group-sm > input[type="time"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="time"].btn,
   .input-group-sm > .input-group-btn > input[type="time"].btn--default,
-  .input-group-sm > .input-group-btn > input[type="time"].btn--primary, .input-group-sm
+  .input-group-sm > .input-group-btn > input[type="time"].btn--primary,
+  .form-submit .input-group-sm > .input-group-btn > input[type="time"].submit, .input-group-sm
   input[type="time"],
   input[type="datetime-local"].input-sm,
   .input-group-sm > input[type="datetime-local"].form-control,
+  .comment-form-author .input-group-sm > input[type="datetime-local"],
+  .comment-form-email .input-group-sm > input[type="datetime-local"],
+  .comment-form-url .input-group-sm > input[type="datetime-local"],
   .input-group-sm > input[type="datetime-local"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="datetime-local"].btn,
   .input-group-sm > .input-group-btn > input[type="datetime-local"].btn--default,
-  .input-group-sm > .input-group-btn > input[type="datetime-local"].btn--primary, .input-group-sm
+  .input-group-sm > .input-group-btn > input[type="datetime-local"].btn--primary,
+  .form-submit .input-group-sm > .input-group-btn > input[type="datetime-local"].submit, .input-group-sm
   input[type="datetime-local"],
   input[type="month"].input-sm,
   .input-group-sm > input[type="month"].form-control,
+  .comment-form-author .input-group-sm > input[type="month"],
+  .comment-form-email .input-group-sm > input[type="month"],
+  .comment-form-url .input-group-sm > input[type="month"],
   .input-group-sm > input[type="month"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="month"].btn,
   .input-group-sm > .input-group-btn > input[type="month"].btn--default,
-  .input-group-sm > .input-group-btn > input[type="month"].btn--primary, .input-group-sm
+  .input-group-sm > .input-group-btn > input[type="month"].btn--primary,
+  .form-submit .input-group-sm > .input-group-btn > input[type="month"].submit, .input-group-sm
   input[type="month"] {
     line-height: 30px;
   }
   /* line 202, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-  input[type="date"].input-lg, .input-group-lg > input[type="date"].form-control,
+  input[type="date"].input-lg, .input-group-lg > input[type="date"].form-control, .comment-form-author .input-group-lg > input[type="date"], .comment-form-email .input-group-lg > input[type="date"], .comment-form-url .input-group-lg > input[type="date"],
   .input-group-lg > input[type="date"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="date"].btn,
   .input-group-lg > .input-group-btn > input[type="date"].btn--default,
-  .input-group-lg > .input-group-btn > input[type="date"].btn--primary, .input-group-lg input[type="date"],
+  .input-group-lg > .input-group-btn > input[type="date"].btn--primary,
+  .form-submit .input-group-lg > .input-group-btn > input[type="date"].submit, .input-group-lg input[type="date"],
   input[type="time"].input-lg,
   .input-group-lg > input[type="time"].form-control,
+  .comment-form-author .input-group-lg > input[type="time"],
+  .comment-form-email .input-group-lg > input[type="time"],
+  .comment-form-url .input-group-lg > input[type="time"],
   .input-group-lg > input[type="time"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="time"].btn,
   .input-group-lg > .input-group-btn > input[type="time"].btn--default,
-  .input-group-lg > .input-group-btn > input[type="time"].btn--primary, .input-group-lg
+  .input-group-lg > .input-group-btn > input[type="time"].btn--primary,
+  .form-submit .input-group-lg > .input-group-btn > input[type="time"].submit, .input-group-lg
   input[type="time"],
   input[type="datetime-local"].input-lg,
   .input-group-lg > input[type="datetime-local"].form-control,
+  .comment-form-author .input-group-lg > input[type="datetime-local"],
+  .comment-form-email .input-group-lg > input[type="datetime-local"],
+  .comment-form-url .input-group-lg > input[type="datetime-local"],
   .input-group-lg > input[type="datetime-local"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="datetime-local"].btn,
   .input-group-lg > .input-group-btn > input[type="datetime-local"].btn--default,
-  .input-group-lg > .input-group-btn > input[type="datetime-local"].btn--primary, .input-group-lg
+  .input-group-lg > .input-group-btn > input[type="datetime-local"].btn--primary,
+  .form-submit .input-group-lg > .input-group-btn > input[type="datetime-local"].submit, .input-group-lg
   input[type="datetime-local"],
   input[type="month"].input-lg,
   .input-group-lg > input[type="month"].form-control,
+  .comment-form-author .input-group-lg > input[type="month"],
+  .comment-form-email .input-group-lg > input[type="month"],
+  .comment-form-url .input-group-lg > input[type="month"],
   .input-group-lg > input[type="month"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="month"].btn,
   .input-group-lg > .input-group-btn > input[type="month"].btn--default,
-  .input-group-lg > .input-group-btn > input[type="month"].btn--primary, .input-group-lg
+  .input-group-lg > .input-group-btn > input[type="month"].btn--primary,
+  .form-submit .input-group-lg > .input-group-btn > input[type="month"].submit, .input-group-lg
   input[type="month"] {
     line-height: 46px;
   }
@@ -4015,25 +4058,28 @@ input[type="checkbox"] {
   min-height: 34px;
 }
 /* line 315, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-.form-control-static.input-lg, .input-group-lg > .form-control-static.form-control,
+.form-control-static.input-lg, .input-group-lg > .form-control-static.form-control, .comment-form-comment .input-group-lg > textarea.form-control-static, .comment-form-author .input-group-lg > input.form-control-static, .comment-form-email .input-group-lg > input.form-control-static, .comment-form-url .input-group-lg > input.form-control-static,
 .input-group-lg > .form-control-static.input-group-addon,
 .input-group-lg > .input-group-btn > .form-control-static.btn,
 .input-group-lg > .input-group-btn > .form-control-static.btn--default,
-.input-group-lg > .input-group-btn > .form-control-static.btn--primary, .form-control-static.input-sm, .input-group-sm > .form-control-static.form-control,
+.input-group-lg > .input-group-btn > .form-control-static.btn--primary,
+.form-submit .input-group-lg > .input-group-btn > .form-control-static.submit, .form-control-static.input-sm, .input-group-sm > .form-control-static.form-control, .comment-form-comment .input-group-sm > textarea.form-control-static, .comment-form-author .input-group-sm > input.form-control-static, .comment-form-email .input-group-sm > input.form-control-static, .comment-form-url .input-group-sm > input.form-control-static,
 .input-group-sm > .form-control-static.input-group-addon,
 .input-group-sm > .input-group-btn > .form-control-static.btn,
 .input-group-sm > .input-group-btn > .form-control-static.btn--default,
-.input-group-sm > .input-group-btn > .form-control-static.btn--primary {
+.input-group-sm > .input-group-btn > .form-control-static.btn--primary,
+.form-submit .input-group-sm > .input-group-btn > .form-control-static.submit {
   padding-left: 0;
   padding-right: 0;
 }
 
 /* line 71, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
-.input-sm, .input-group-sm > .form-control,
+.input-sm, .input-group-sm > .form-control, .comment-form-comment .input-group-sm > textarea, .comment-form-author .input-group-sm > input, .comment-form-email .input-group-sm > input, .comment-form-url .input-group-sm > input,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn,
 .input-group-sm > .input-group-btn > .btn--default,
-.input-group-sm > .input-group-btn > .btn--primary {
+.input-group-sm > .input-group-btn > .btn--primary,
+.form-submit .input-group-sm > .input-group-btn > .submit {
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
@@ -4046,28 +4092,31 @@ select.input-sm, .input-group-sm > select.form-control,
 .input-group-sm > select.input-group-addon,
 .input-group-sm > .input-group-btn > select.btn,
 .input-group-sm > .input-group-btn > select.btn--default,
-.input-group-sm > .input-group-btn > select.btn--primary {
+.input-group-sm > .input-group-btn > select.btn--primary,
+.form-submit .input-group-sm > .input-group-btn > select.submit {
   height: 30px;
   line-height: 30px;
 }
 
 /* line 84, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
-textarea.input-sm, .input-group-sm > textarea.form-control,
+textarea.input-sm, .input-group-sm > textarea.form-control, .comment-form-comment .input-group-sm > textarea,
 .input-group-sm > textarea.input-group-addon,
 .input-group-sm > .input-group-btn > textarea.btn,
 .input-group-sm > .input-group-btn > textarea.btn--default,
 .input-group-sm > .input-group-btn > textarea.btn--primary,
+.form-submit .input-group-sm > .input-group-btn > textarea.submit,
 select[multiple].input-sm,
 .input-group-sm > select[multiple].form-control,
 .input-group-sm > select[multiple].input-group-addon,
 .input-group-sm > .input-group-btn > select[multiple].btn,
 .input-group-sm > .input-group-btn > select[multiple].btn--default,
-.input-group-sm > .input-group-btn > select[multiple].btn--primary {
+.input-group-sm > .input-group-btn > select[multiple].btn--primary,
+.form-submit .input-group-sm > .input-group-btn > select[multiple].submit {
   height: auto;
 }
 
 /* line 333, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-.form-group-sm .form-control {
+.form-group-sm .form-control, .form-group-sm .comment-form-comment textarea, .comment-form-comment .form-group-sm textarea, .form-group-sm .comment-form-author input, .comment-form-author .form-group-sm input, .form-group-sm .comment-form-email input, .comment-form-email .form-group-sm input, .form-group-sm .comment-form-url input, .comment-form-url .form-group-sm input {
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
@@ -4080,7 +4129,7 @@ select[multiple].input-sm,
   line-height: 30px;
 }
 /* line 344, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-.form-group-sm textarea.form-control,
+.form-group-sm textarea.form-control, .form-group-sm .comment-form-comment textarea, .comment-form-comment .form-group-sm textarea,
 .form-group-sm select[multiple].form-control {
   height: auto;
 }
@@ -4094,11 +4143,12 @@ select[multiple].input-sm,
 }
 
 /* line 71, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
-.input-lg, .input-group-lg > .form-control,
+.input-lg, .input-group-lg > .form-control, .comment-form-comment .input-group-lg > textarea, .comment-form-author .input-group-lg > input, .comment-form-email .input-group-lg > input, .comment-form-url .input-group-lg > input,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn,
 .input-group-lg > .input-group-btn > .btn--default,
-.input-group-lg > .input-group-btn > .btn--primary {
+.input-group-lg > .input-group-btn > .btn--primary,
+.form-submit .input-group-lg > .input-group-btn > .submit {
   height: 46px;
   padding: 10px 16px;
   font-size: 18px;
@@ -4111,28 +4161,31 @@ select.input-lg, .input-group-lg > select.form-control,
 .input-group-lg > select.input-group-addon,
 .input-group-lg > .input-group-btn > select.btn,
 .input-group-lg > .input-group-btn > select.btn--default,
-.input-group-lg > .input-group-btn > select.btn--primary {
+.input-group-lg > .input-group-btn > select.btn--primary,
+.form-submit .input-group-lg > .input-group-btn > select.submit {
   height: 46px;
   line-height: 46px;
 }
 
 /* line 84, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
-textarea.input-lg, .input-group-lg > textarea.form-control,
+textarea.input-lg, .input-group-lg > textarea.form-control, .comment-form-comment .input-group-lg > textarea,
 .input-group-lg > textarea.input-group-addon,
 .input-group-lg > .input-group-btn > textarea.btn,
 .input-group-lg > .input-group-btn > textarea.btn--default,
 .input-group-lg > .input-group-btn > textarea.btn--primary,
+.form-submit .input-group-lg > .input-group-btn > textarea.submit,
 select[multiple].input-lg,
 .input-group-lg > select[multiple].form-control,
 .input-group-lg > select[multiple].input-group-addon,
 .input-group-lg > .input-group-btn > select[multiple].btn,
 .input-group-lg > .input-group-btn > select[multiple].btn--default,
-.input-group-lg > .input-group-btn > select[multiple].btn--primary {
+.input-group-lg > .input-group-btn > select[multiple].btn--primary,
+.form-submit .input-group-lg > .input-group-btn > select[multiple].submit {
   height: auto;
 }
 
 /* line 359, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-.form-group-lg .form-control {
+.form-group-lg .form-control, .form-group-lg .comment-form-comment textarea, .comment-form-comment .form-group-lg textarea, .form-group-lg .comment-form-author input, .comment-form-author .form-group-lg input, .form-group-lg .comment-form-email input, .comment-form-email .form-group-lg input, .form-group-lg .comment-form-url input, .comment-form-url .form-group-lg input {
   height: 46px;
   padding: 10px 16px;
   font-size: 18px;
@@ -4145,7 +4198,7 @@ select[multiple].input-lg,
   line-height: 46px;
 }
 /* line 370, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-.form-group-lg textarea.form-control,
+.form-group-lg textarea.form-control, .form-group-lg .comment-form-comment textarea, .comment-form-comment .form-group-lg textarea,
 .form-group-lg select[multiple].form-control {
   height: auto;
 }
@@ -4163,7 +4216,7 @@ select[multiple].input-lg,
   position: relative;
 }
 /* line 393, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-.has-feedback .form-control {
+.has-feedback .form-control, .has-feedback .comment-form-comment textarea, .comment-form-comment .has-feedback textarea, .has-feedback .comment-form-author input, .comment-form-author .has-feedback input, .has-feedback .comment-form-email input, .comment-form-email .has-feedback input, .has-feedback .comment-form-url input, .comment-form-url .has-feedback input {
   padding-right: 42.5px;
 }
 
@@ -4182,26 +4235,44 @@ select[multiple].input-lg,
 }
 
 /* line 410, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-.input-lg + .form-control-feedback, .input-group-lg > .form-control + .form-control-feedback,
+.input-lg + .form-control-feedback, .input-group-lg > .form-control + .form-control-feedback, .comment-form-comment .input-group-lg > textarea + .form-control-feedback, .comment-form-author .input-group-lg > input + .form-control-feedback, .comment-form-email .input-group-lg > input + .form-control-feedback, .comment-form-url .input-group-lg > input + .form-control-feedback,
 .input-group-lg > .input-group-addon + .form-control-feedback,
 .input-group-lg > .input-group-btn > .btn + .form-control-feedback,
 .input-group-lg > .input-group-btn > .btn--default + .form-control-feedback,
 .input-group-lg > .input-group-btn > .btn--primary + .form-control-feedback,
+.form-submit .input-group-lg > .input-group-btn > .submit + .form-control-feedback,
 .input-group-lg + .form-control-feedback,
-.form-group-lg .form-control + .form-control-feedback {
+.form-group-lg .form-control + .form-control-feedback,
+.form-group-lg .comment-form-comment textarea + .form-control-feedback,
+.comment-form-comment .form-group-lg textarea + .form-control-feedback,
+.form-group-lg .comment-form-author input + .form-control-feedback,
+.comment-form-author .form-group-lg input + .form-control-feedback,
+.form-group-lg .comment-form-email input + .form-control-feedback,
+.comment-form-email .form-group-lg input + .form-control-feedback,
+.form-group-lg .comment-form-url input + .form-control-feedback,
+.comment-form-url .form-group-lg input + .form-control-feedback {
   width: 46px;
   height: 46px;
   line-height: 46px;
 }
 
 /* line 417, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-.input-sm + .form-control-feedback, .input-group-sm > .form-control + .form-control-feedback,
+.input-sm + .form-control-feedback, .input-group-sm > .form-control + .form-control-feedback, .comment-form-comment .input-group-sm > textarea + .form-control-feedback, .comment-form-author .input-group-sm > input + .form-control-feedback, .comment-form-email .input-group-sm > input + .form-control-feedback, .comment-form-url .input-group-sm > input + .form-control-feedback,
 .input-group-sm > .input-group-addon + .form-control-feedback,
 .input-group-sm > .input-group-btn > .btn + .form-control-feedback,
 .input-group-sm > .input-group-btn > .btn--default + .form-control-feedback,
 .input-group-sm > .input-group-btn > .btn--primary + .form-control-feedback,
+.form-submit .input-group-sm > .input-group-btn > .submit + .form-control-feedback,
 .input-group-sm + .form-control-feedback,
-.form-group-sm .form-control + .form-control-feedback {
+.form-group-sm .form-control + .form-control-feedback,
+.form-group-sm .comment-form-comment textarea + .form-control-feedback,
+.comment-form-comment .form-group-sm textarea + .form-control-feedback,
+.form-group-sm .comment-form-author input + .form-control-feedback,
+.comment-form-author .form-group-sm input + .form-control-feedback,
+.form-group-sm .comment-form-email input + .form-control-feedback,
+.comment-form-email .form-group-sm input + .form-control-feedback,
+.form-group-sm .comment-form-url input + .form-control-feedback,
+.comment-form-url .form-group-sm input + .form-control-feedback {
   width: 30px;
   height: 30px;
   line-height: 30px;
@@ -4217,13 +4288,13 @@ select[multiple].input-lg,
   color: #3c763d;
 }
 /* line 21, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
-.has-success .form-control {
+.has-success .form-control, .has-success .comment-form-comment textarea, .comment-form-comment .has-success textarea, .has-success .comment-form-author input, .comment-form-author .has-success input, .has-success .comment-form-email input, .comment-form-email .has-success input, .has-success .comment-form-url input, .comment-form-url .has-success input {
   border-color: #3c763d;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 /* line 24, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
-.has-success .form-control:focus {
+.has-success .form-control:focus, .has-success .comment-form-comment textarea:focus, .comment-form-comment .has-success textarea:focus, .has-success .comment-form-author input:focus, .comment-form-author .has-success input:focus, .has-success .comment-form-email input:focus, .comment-form-email .has-success input:focus, .has-success .comment-form-url input:focus, .comment-form-url .has-success input:focus {
   border-color: #2b542c;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
@@ -4249,13 +4320,13 @@ select[multiple].input-lg,
   color: #8a6d3b;
 }
 /* line 21, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
-.has-warning .form-control {
+.has-warning .form-control, .has-warning .comment-form-comment textarea, .comment-form-comment .has-warning textarea, .has-warning .comment-form-author input, .comment-form-author .has-warning input, .has-warning .comment-form-email input, .comment-form-email .has-warning input, .has-warning .comment-form-url input, .comment-form-url .has-warning input {
   border-color: #8a6d3b;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 /* line 24, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
-.has-warning .form-control:focus {
+.has-warning .form-control:focus, .has-warning .comment-form-comment textarea:focus, .comment-form-comment .has-warning textarea:focus, .has-warning .comment-form-author input:focus, .comment-form-author .has-warning input:focus, .has-warning .comment-form-email input:focus, .comment-form-email .has-warning input:focus, .has-warning .comment-form-url input:focus, .comment-form-url .has-warning input:focus {
   border-color: #66512c;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
@@ -4281,13 +4352,13 @@ select[multiple].input-lg,
   color: #a94442;
 }
 /* line 21, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
-.has-error .form-control {
+.has-error .form-control, .has-error .comment-form-comment textarea, .comment-form-comment .has-error textarea, .has-error .comment-form-author input, .comment-form-author .has-error input, .has-error .comment-form-email input, .comment-form-email .has-error input, .has-error .comment-form-url input, .comment-form-url .has-error input {
   border-color: #a94442;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 /* line 24, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
-.has-error .form-control:focus {
+.has-error .form-control:focus, .has-error .comment-form-comment textarea:focus, .comment-form-comment .has-error textarea:focus, .has-error .comment-form-author input:focus, .comment-form-author .has-error input:focus, .has-error .comment-form-email input:focus, .comment-form-email .has-error input:focus, .has-error .comment-form-url input:focus, .comment-form-url .has-error input:focus {
   border-color: #843534;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
@@ -4328,7 +4399,7 @@ select[multiple].input-lg,
     vertical-align: middle;
   }
   /* line 485, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-  .form-inline .form-control {
+  .form-inline .form-control, .form-inline .comment-form-comment textarea, .comment-form-comment .form-inline textarea, .form-inline .comment-form-author input, .comment-form-author .form-inline input, .form-inline .comment-form-email input, .comment-form-email .form-inline input, .form-inline .comment-form-url input, .comment-form-url .form-inline input {
     display: inline-block;
     width: auto;
     vertical-align: middle;
@@ -4345,11 +4416,19 @@ select[multiple].input-lg,
   /* line 500, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
   .form-inline .input-group .input-group-addon,
   .form-inline .input-group .input-group-btn,
-  .form-inline .input-group .form-control {
+  .form-inline .input-group .form-control,
+  .form-inline .input-group .comment-form-comment textarea,
+  .comment-form-comment .form-inline .input-group textarea,
+  .form-inline .input-group .comment-form-author input,
+  .comment-form-author .form-inline .input-group input,
+  .form-inline .input-group .comment-form-email input,
+  .comment-form-email .form-inline .input-group input,
+  .form-inline .input-group .comment-form-url input,
+  .comment-form-url .form-inline .input-group input {
     width: auto;
   }
   /* line 508, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-  .form-inline .input-group > .form-control {
+  .form-inline .input-group > .form-control, .form-inline .comment-form-comment .input-group > textarea, .comment-form-comment .form-inline .input-group > textarea, .form-inline .comment-form-author .input-group > input, .comment-form-author .form-inline .input-group > input, .form-inline .comment-form-email .input-group > input, .comment-form-email .form-inline .input-group > input, .form-inline .comment-form-url .input-group > input, .comment-form-url .form-inline .input-group > input {
     width: 100%;
   }
   /* line 512, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
@@ -4438,7 +4517,7 @@ select[multiple].input-lg,
 }
 
 /* line 9, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
-.btn, .btn--default, .btn--primary {
+.btn, .btn--default, .btn--primary, .form-submit .submit {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -4459,25 +4538,25 @@ select[multiple].input-lg,
   user-select: none;
 }
 /* line 26, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
-.btn:focus, .btn--default:focus, .btn--primary:focus, .btn.focus, .focus.btn--default, .focus.btn--primary, .btn:active:focus, .btn--default:active:focus, .btn--primary:active:focus, .btn:active.focus, .btn--default:active.focus, .btn--primary:active.focus, .btn.active:focus, .active.btn--default:focus, .active.btn--primary:focus, .btn.active.focus, .active.focus.btn--default, .active.focus.btn--primary {
+.btn:focus, .btn--default:focus, .btn--primary:focus, .form-submit .submit:focus, .btn.focus, .focus.btn--default, .focus.btn--primary, .form-submit .focus.submit, .btn:active:focus, .btn--default:active:focus, .btn--primary:active:focus, .form-submit .submit:active:focus, .btn:active.focus, .btn--default:active.focus, .btn--primary:active.focus, .form-submit .submit:active.focus, .btn.active:focus, .active.btn--default:focus, .active.btn--primary:focus, .form-submit .active.submit:focus, .btn.active.focus, .active.focus.btn--default, .active.focus.btn--primary, .form-submit .active.focus.submit {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 /* line 32, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
-.btn:hover, .btn--default:hover, .btn--primary:hover, .btn:focus, .btn--default:focus, .btn--primary:focus, .btn.focus, .focus.btn--default, .focus.btn--primary {
+.btn:hover, .btn--default:hover, .btn--primary:hover, .form-submit .submit:hover, .btn:focus, .btn--default:focus, .btn--primary:focus, .form-submit .submit:focus, .btn.focus, .focus.btn--default, .focus.btn--primary, .form-submit .focus.submit {
   color: #333;
   text-decoration: none;
 }
 /* line 39, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
-.btn:active, .btn--default:active, .btn--primary:active, .btn.active, .active.btn--default, .active.btn--primary {
+.btn:active, .btn--default:active, .btn--primary:active, .form-submit .submit:active, .btn.active, .active.btn--default, .active.btn--primary, .form-submit .active.submit {
   outline: 0;
   background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 /* line 46, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
-.btn.disabled, .disabled.btn--default, .disabled.btn--primary, .btn[disabled], [disabled].btn--default, [disabled].btn--primary, fieldset[disabled] .btn, fieldset[disabled] .btn--default, fieldset[disabled] .btn--primary {
+.btn.disabled, .disabled.btn--default, .disabled.btn--primary, .form-submit .disabled.submit, .btn[disabled], [disabled].btn--default, [disabled].btn--primary, .form-submit [disabled].submit, fieldset[disabled] .btn, fieldset[disabled] .btn--default, fieldset[disabled] .btn--primary, fieldset[disabled] .form-submit .submit, .form-submit fieldset[disabled] .submit {
   cursor: not-allowed;
   opacity: 0.65;
   filter: alpha(opacity=65);
@@ -4486,7 +4565,7 @@ select[multiple].input-lg,
 }
 
 /* line 58, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
-a.btn.disabled, a.disabled.btn--default, a.disabled.btn--primary, fieldset[disabled] a.btn, fieldset[disabled] a.btn--default, fieldset[disabled] a.btn--primary {
+a.btn.disabled, a.disabled.btn--default, a.disabled.btn--primary, .form-submit a.disabled.submit, fieldset[disabled] a.btn, fieldset[disabled] a.btn--default, fieldset[disabled] a.btn--primary, fieldset[disabled] .form-submit a.submit, .form-submit fieldset[disabled] a.submit {
   pointer-events: none;
 }
 
@@ -4789,7 +4868,7 @@ a.btn.disabled, a.disabled.btn--default, a.disabled.btn--primary, fieldset[disab
 }
 
 /* line 135, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
-.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .btn--default, .btn-group-lg > .btn--primary {
+.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .btn--default, .btn-group-lg > .btn--primary, .form-submit .btn-group-lg > .submit {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33333;
@@ -4797,7 +4876,7 @@ a.btn.disabled, a.disabled.btn--default, a.disabled.btn--primary, fieldset[disab
 }
 
 /* line 139, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
-.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .btn--default, .btn-group-sm > .btn--primary {
+.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .btn--default, .btn-group-sm > .btn--primary, .form-submit .btn-group-sm > .submit {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
@@ -4805,7 +4884,7 @@ a.btn.disabled, a.disabled.btn--default, a.disabled.btn--primary, fieldset[disab
 }
 
 /* line 143, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
-.btn-xs, .btn-group-xs > .btn, .btn-group-xs > .btn--default, .btn-group-xs > .btn--primary {
+.btn-xs, .btn-group-xs > .btn, .btn-group-xs > .btn--default, .btn-group-xs > .btn--primary, .form-submit .btn-group-xs > .submit {
   padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
@@ -4922,7 +5001,7 @@ tbody.collapse.in {
   background-clip: padding-box;
 }
 /* line 54, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_dropdowns.scss */
-.dropdown-menu.pull-right, .dropdown-menu.pull--right, .dropdown-menu.navigation-header__cart, .navigation-header__cart.mega-dropdown__menu, .pull--right.mega-dropdown__menu, .mega-dropdown__menu.video-bar__ext-link, .mega-dropdown__menu.read-more, .meta__author-avatar--post-header img.mega-dropdown__menu, .dropdown-menu.video-bar__ext-link, .dropdown-menu.read-more, .meta__author-avatar--post-header img.dropdown-menu, .pull-right.mega-dropdown__menu {
+.dropdown-menu.pull-right, .dropdown-menu.pull--right, .dropdown-menu.navigation-header__cart, .navigation-header__cart.mega-dropdown__menu, .pull--right.mega-dropdown__menu, .mega-dropdown__menu.video-bar__ext-link, .mega-dropdown__menu.comment-metadata, .mega-dropdown__menu.read-more, .meta__author-avatar--post-header img.mega-dropdown__menu, .dropdown-menu.video-bar__ext-link, .dropdown-menu.comment-metadata, .dropdown-menu.read-more, .meta__author-avatar--post-header img.dropdown-menu, .pull-right.mega-dropdown__menu {
   right: 0;
   left: auto;
 }
@@ -5014,7 +5093,7 @@ tbody.collapse.in {
 }
 
 /* line 173, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_dropdowns.scss */
-.pull-right > .dropdown-menu, .pull--right > .dropdown-menu, .navigation-header__cart > .dropdown-menu, .video-bar__ext-link > .dropdown-menu, .read-more > .dropdown-menu, .meta__author-avatar--post-header img > .dropdown-menu, .pull-right > .mega-dropdown__menu, .pull--right > .mega-dropdown__menu, .navigation-header__cart > .mega-dropdown__menu, .video-bar__ext-link > .mega-dropdown__menu, .read-more > .mega-dropdown__menu, .meta__author-avatar--post-header img > .mega-dropdown__menu {
+.pull-right > .dropdown-menu, .pull--right > .dropdown-menu, .navigation-header__cart > .dropdown-menu, .video-bar__ext-link > .dropdown-menu, .comment-metadata > .dropdown-menu, .read-more > .dropdown-menu, .meta__author-avatar--post-header img > .dropdown-menu, .pull-right > .mega-dropdown__menu, .pull--right > .mega-dropdown__menu, .navigation-header__cart > .mega-dropdown__menu, .video-bar__ext-link > .mega-dropdown__menu, .comment-metadata > .mega-dropdown__menu, .read-more > .mega-dropdown__menu, .meta__author-avatar--post-header img > .mega-dropdown__menu {
   right: 0;
   left: auto;
 }
@@ -5059,38 +5138,47 @@ tbody.collapse.in {
   vertical-align: middle;
 }
 /* line 11, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn, .btn-group > .btn--default, .btn-group > .btn--primary,
+.btn-group > .btn, .btn-group > .btn--default, .btn-group > .btn--primary, .form-submit .btn-group > .submit,
 .btn-group-vertical > .btn,
 .btn-group-vertical > .btn--default,
-.btn-group-vertical > .btn--primary {
+.btn-group-vertical > .btn--primary,
+.form-submit .btn-group-vertical > .submit {
   position: relative;
   float: left;
 }
 /* line 15, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn:hover, .btn-group > .btn--default:hover, .btn-group > .btn--primary:hover, .btn-group > .btn:focus, .btn-group > .btn--default:focus, .btn-group > .btn--primary:focus, .btn-group > .btn:active, .btn-group > .btn--default:active, .btn-group > .btn--primary:active, .btn-group > .btn.active, .btn-group > .active.btn--default, .btn-group > .active.btn--primary,
+.btn-group > .btn:hover, .btn-group > .btn--default:hover, .btn-group > .btn--primary:hover, .form-submit .btn-group > .submit:hover, .btn-group > .btn:focus, .btn-group > .btn--default:focus, .btn-group > .btn--primary:focus, .form-submit .btn-group > .submit:focus, .btn-group > .btn:active, .btn-group > .btn--default:active, .btn-group > .btn--primary:active, .form-submit .btn-group > .submit:active, .btn-group > .btn.active, .btn-group > .active.btn--default, .btn-group > .active.btn--primary, .form-submit .btn-group > .active.submit,
 .btn-group-vertical > .btn:hover,
 .btn-group-vertical > .btn--default:hover,
 .btn-group-vertical > .btn--primary:hover,
+.form-submit .btn-group-vertical > .submit:hover,
 .btn-group-vertical > .btn:focus,
 .btn-group-vertical > .btn--default:focus,
 .btn-group-vertical > .btn--primary:focus,
+.form-submit .btn-group-vertical > .submit:focus,
 .btn-group-vertical > .btn:active,
 .btn-group-vertical > .btn--default:active,
 .btn-group-vertical > .btn--primary:active,
+.form-submit .btn-group-vertical > .submit:active,
 .btn-group-vertical > .btn.active,
 .btn-group-vertical > .active.btn--default,
-.btn-group-vertical > .active.btn--primary {
+.btn-group-vertical > .active.btn--primary,
+.form-submit .btn-group-vertical > .active.submit {
   z-index: 2;
 }
 
 /* line 26, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group .btn + .btn, .btn-group .btn--default + .btn, .btn-group .btn--primary + .btn, .btn-group .btn + .btn--default, .btn-group .btn--default + .btn--default, .btn-group .btn--primary + .btn--default, .btn-group .btn + .btn--primary, .btn-group .btn--default + .btn--primary, .btn-group .btn--primary + .btn--primary,
+.btn-group .btn + .btn, .btn-group .btn--default + .btn, .btn-group .btn--primary + .btn, .btn-group .form-submit .submit + .btn, .form-submit .btn-group .submit + .btn, .btn-group .btn + .btn--default, .btn-group .btn--default + .btn--default, .btn-group .btn--primary + .btn--default, .btn-group .form-submit .submit + .btn--default, .form-submit .btn-group .submit + .btn--default, .btn-group .btn + .btn--primary, .btn-group .btn--default + .btn--primary, .btn-group .btn--primary + .btn--primary, .btn-group .form-submit .submit + .btn--primary, .form-submit .btn-group .submit + .btn--primary, .btn-group .form-submit .btn + .submit, .form-submit .btn-group .btn + .submit, .btn-group .form-submit .btn--default + .submit, .form-submit .btn-group .btn--default + .submit, .btn-group .form-submit .btn--primary + .submit, .form-submit .btn-group .btn--primary + .submit, .btn-group .form-submit .submit + .submit, .form-submit .btn-group .submit + .submit,
 .btn-group .btn + .btn-group,
 .btn-group .btn--default + .btn-group,
 .btn-group .btn--primary + .btn-group,
+.btn-group .form-submit .submit + .btn-group,
+.form-submit .btn-group .submit + .btn-group,
 .btn-group .btn-group + .btn,
 .btn-group .btn-group + .btn--default,
 .btn-group .btn-group + .btn--primary,
+.btn-group .form-submit .btn-group + .submit,
+.form-submit .btn-group .btn-group + .submit,
 .btn-group .btn-group + .btn-group {
   margin-left: -1px;
 }
@@ -5109,35 +5197,35 @@ tbody.collapse.in {
   clear: both;
 }
 /* line 39, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-toolbar .btn, .btn-toolbar .btn--default, .btn-toolbar .btn--primary,
+.btn-toolbar .btn, .btn-toolbar .btn--default, .btn-toolbar .btn--primary, .btn-toolbar .form-submit .submit, .form-submit .btn-toolbar .submit,
 .btn-toolbar .btn-group,
 .btn-toolbar .input-group {
   float: left;
 }
 /* line 44, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-toolbar > .btn, .btn-toolbar > .btn--default, .btn-toolbar > .btn--primary,
+.btn-toolbar > .btn, .btn-toolbar > .btn--default, .btn-toolbar > .btn--primary, .form-submit .btn-toolbar > .submit,
 .btn-toolbar > .btn-group,
 .btn-toolbar > .input-group {
   margin-left: 5px;
 }
 
 /* line 51, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle):not(.mega-dropdown__toggle), .btn-group > .btn--default:not(:first-child):not(:last-child):not(.dropdown-toggle):not(.mega-dropdown__toggle), .btn-group > .btn--primary:not(:first-child):not(:last-child):not(.dropdown-toggle):not(.mega-dropdown__toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle):not(.mega-dropdown__toggle), .btn-group > .btn--default:not(:first-child):not(:last-child):not(.dropdown-toggle):not(.mega-dropdown__toggle), .btn-group > .btn--primary:not(:first-child):not(:last-child):not(.dropdown-toggle):not(.mega-dropdown__toggle), .form-submit .btn-group > .submit:not(:first-child):not(:last-child):not(.dropdown-toggle):not(.mega-dropdown__toggle) {
   border-radius: 0;
 }
 
 /* line 56, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn:first-child, .btn-group > .btn--default:first-child, .btn-group > .btn--primary:first-child {
+.btn-group > .btn:first-child, .btn-group > .btn--default:first-child, .btn-group > .btn--primary:first-child, .form-submit .btn-group > .submit:first-child {
   margin-left: 0;
 }
 /* line 58, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle):not(.mega-dropdown__toggle), .btn-group > .btn--default:first-child:not(:last-child):not(.dropdown-toggle):not(.mega-dropdown__toggle), .btn-group > .btn--primary:first-child:not(:last-child):not(.dropdown-toggle):not(.mega-dropdown__toggle) {
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle):not(.mega-dropdown__toggle), .btn-group > .btn--default:first-child:not(:last-child):not(.dropdown-toggle):not(.mega-dropdown__toggle), .btn-group > .btn--primary:first-child:not(:last-child):not(.dropdown-toggle):not(.mega-dropdown__toggle), .form-submit .btn-group > .submit:first-child:not(:last-child):not(.dropdown-toggle):not(.mega-dropdown__toggle) {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
 /* line 63, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn:last-child:not(:first-child), .btn-group > .btn--default:last-child:not(:first-child), .btn-group > .btn--primary:last-child:not(:first-child),
+.btn-group > .btn:last-child:not(:first-child), .btn-group > .btn--default:last-child:not(:first-child), .btn-group > .btn--primary:last-child:not(:first-child), .form-submit .btn-group > .submit:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child),
 .btn-group > .mega-dropdown__toggle:not(:first-child) {
   border-bottom-left-radius: 0;
@@ -5150,12 +5238,12 @@ tbody.collapse.in {
 }
 
 /* line 72, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn--default, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn--primary {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn--default, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn--primary, .form-submit .btn-group > .btn-group:not(:first-child):not(:last-child) > .submit {
   border-radius: 0;
 }
 
 /* line 76, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btn--default:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btn--primary:last-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btn--default:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btn--primary:last-child, .form-submit .btn-group > .btn-group:first-child:not(:last-child) > .submit:last-child,
 .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle,
 .btn-group > .btn-group:first-child:not(:last-child) > .mega-dropdown__toggle {
   border-bottom-right-radius: 0;
@@ -5163,7 +5251,7 @@ tbody.collapse.in {
 }
 
 /* line 81, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btn--default:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btn--primary:first-child {
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btn--default:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btn--primary:first-child, .form-submit .btn-group > .btn-group:last-child:not(:first-child) > .submit:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
@@ -5176,13 +5264,13 @@ tbody.collapse.in {
 }
 
 /* line 105, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn + .dropdown-toggle, .btn-group > .btn--default + .dropdown-toggle, .btn-group > .btn--primary + .dropdown-toggle, .btn-group > .btn + .mega-dropdown__toggle, .btn-group > .btn--default + .mega-dropdown__toggle, .btn-group > .btn--primary + .mega-dropdown__toggle {
+.btn-group > .btn + .dropdown-toggle, .btn-group > .btn--default + .dropdown-toggle, .btn-group > .btn--primary + .dropdown-toggle, .form-submit .btn-group > .submit + .dropdown-toggle, .btn-group > .btn + .mega-dropdown__toggle, .btn-group > .btn--default + .mega-dropdown__toggle, .btn-group > .btn--primary + .mega-dropdown__toggle, .form-submit .btn-group > .submit + .mega-dropdown__toggle {
   padding-left: 8px;
   padding-right: 8px;
 }
 
 /* line 109, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle, .btn-group-lg.btn-group > .btn--default + .dropdown-toggle, .btn-group-lg.btn-group > .btn--primary + .dropdown-toggle, .btn-group > .btn-lg + .mega-dropdown__toggle, .btn-group-lg.btn-group > .btn + .mega-dropdown__toggle, .btn-group-lg.btn-group > .btn--default + .mega-dropdown__toggle, .btn-group-lg.btn-group > .btn--primary + .mega-dropdown__toggle {
+.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle, .btn-group-lg.btn-group > .btn--default + .dropdown-toggle, .btn-group-lg.btn-group > .btn--primary + .dropdown-toggle, .form-submit .btn-group-lg.btn-group > .submit + .dropdown-toggle, .btn-group > .btn-lg + .mega-dropdown__toggle, .btn-group-lg.btn-group > .btn + .mega-dropdown__toggle, .btn-group-lg.btn-group > .btn--default + .mega-dropdown__toggle, .btn-group-lg.btn-group > .btn--primary + .mega-dropdown__toggle, .form-submit .btn-group-lg.btn-group > .submit + .mega-dropdown__toggle {
   padding-left: 12px;
   padding-right: 12px;
 }
@@ -5199,27 +5287,28 @@ tbody.collapse.in {
 }
 
 /* line 127, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn .caret, .btn--default .caret, .btn--primary .caret {
+.btn .caret, .btn--default .caret, .btn--primary .caret, .form-submit .submit .caret {
   margin-left: 0;
 }
 
 /* line 131, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-lg .caret, .btn-group-lg > .btn .caret, .btn-group-lg > .btn--default .caret, .btn-group-lg > .btn--primary .caret {
+.btn-lg .caret, .btn-group-lg > .btn .caret, .btn-group-lg > .btn--default .caret, .btn-group-lg > .btn--primary .caret, .form-submit .btn-group-lg > .submit .caret {
   border-width: 5px 5px 0;
   border-bottom-width: 0;
 }
 
 /* line 136, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup .btn-group-lg > .btn--default .caret, .dropup .btn-group-lg > .btn--primary .caret {
+.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup .btn-group-lg > .btn--default .caret, .dropup .btn-group-lg > .btn--primary .caret, .dropup .form-submit .btn-group-lg > .submit .caret, .form-submit .dropup .btn-group-lg > .submit .caret {
   border-width: 0 5px 5px;
 }
 
 /* line 145, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn, .btn-group-vertical > .btn--default, .btn-group-vertical > .btn--primary,
+.btn-group-vertical > .btn, .btn-group-vertical > .btn--default, .btn-group-vertical > .btn--primary, .form-submit .btn-group-vertical > .submit,
 .btn-group-vertical > .btn-group,
 .btn-group-vertical > .btn-group > .btn,
 .btn-group-vertical > .btn-group > .btn--default,
-.btn-group-vertical > .btn-group > .btn--primary {
+.btn-group-vertical > .btn-group > .btn--primary,
+.form-submit .btn-group-vertical > .btn-group > .submit {
   display: block;
   float: none;
   width: 100%;
@@ -5235,35 +5324,37 @@ tbody.collapse.in {
   clear: both;
 }
 /* line 157, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn-group > .btn, .btn-group-vertical > .btn-group > .btn--default, .btn-group-vertical > .btn-group > .btn--primary {
+.btn-group-vertical > .btn-group > .btn, .btn-group-vertical > .btn-group > .btn--default, .btn-group-vertical > .btn-group > .btn--primary, .form-submit .btn-group-vertical > .btn-group > .submit {
   float: none;
 }
 /* line 162, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn + .btn, .btn-group-vertical > .btn--default + .btn, .btn-group-vertical > .btn--primary + .btn, .btn-group-vertical > .btn + .btn--default, .btn-group-vertical > .btn--default + .btn--default, .btn-group-vertical > .btn--primary + .btn--default, .btn-group-vertical > .btn + .btn--primary, .btn-group-vertical > .btn--default + .btn--primary, .btn-group-vertical > .btn--primary + .btn--primary,
+.btn-group-vertical > .btn + .btn, .btn-group-vertical > .btn--default + .btn, .btn-group-vertical > .btn--primary + .btn, .form-submit .btn-group-vertical > .submit + .btn, .btn-group-vertical > .btn + .btn--default, .btn-group-vertical > .btn--default + .btn--default, .btn-group-vertical > .btn--primary + .btn--default, .form-submit .btn-group-vertical > .submit + .btn--default, .btn-group-vertical > .btn + .btn--primary, .btn-group-vertical > .btn--default + .btn--primary, .btn-group-vertical > .btn--primary + .btn--primary, .form-submit .btn-group-vertical > .submit + .btn--primary, .form-submit .btn-group-vertical > .btn + .submit, .form-submit .btn-group-vertical > .btn--default + .submit, .form-submit .btn-group-vertical > .btn--primary + .submit, .form-submit .btn-group-vertical > .submit + .submit,
 .btn-group-vertical > .btn + .btn-group,
 .btn-group-vertical > .btn--default + .btn-group,
 .btn-group-vertical > .btn--primary + .btn-group,
+.form-submit .btn-group-vertical > .submit + .btn-group,
 .btn-group-vertical > .btn-group + .btn,
 .btn-group-vertical > .btn-group + .btn--default,
 .btn-group-vertical > .btn-group + .btn--primary,
+.form-submit .btn-group-vertical > .btn-group + .submit,
 .btn-group-vertical > .btn-group + .btn-group {
   margin-top: -1px;
   margin-left: 0;
 }
 
 /* line 172, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn:not(:first-child):not(:last-child), .btn-group-vertical > .btn--default:not(:first-child):not(:last-child), .btn-group-vertical > .btn--primary:not(:first-child):not(:last-child) {
+.btn-group-vertical > .btn:not(:first-child):not(:last-child), .btn-group-vertical > .btn--default:not(:first-child):not(:last-child), .btn-group-vertical > .btn--primary:not(:first-child):not(:last-child), .form-submit .btn-group-vertical > .submit:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
 /* line 175, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn:first-child:not(:last-child), .btn-group-vertical > .btn--default:first-child:not(:last-child), .btn-group-vertical > .btn--primary:first-child:not(:last-child) {
+.btn-group-vertical > .btn:first-child:not(:last-child), .btn-group-vertical > .btn--default:first-child:not(:last-child), .btn-group-vertical > .btn--primary:first-child:not(:last-child), .form-submit .btn-group-vertical > .submit:first-child:not(:last-child) {
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 /* line 179, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn:last-child:not(:first-child), .btn-group-vertical > .btn--default:last-child:not(:first-child), .btn-group-vertical > .btn--primary:last-child:not(:first-child) {
+.btn-group-vertical > .btn:last-child:not(:first-child), .btn-group-vertical > .btn--default:last-child:not(:first-child), .btn-group-vertical > .btn--primary:last-child:not(:first-child), .form-submit .btn-group-vertical > .submit:last-child:not(:first-child) {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
   border-bottom-right-radius: 4px;
@@ -5271,12 +5362,12 @@ tbody.collapse.in {
 }
 
 /* line 184, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn--default, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn--primary {
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn--default, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn--primary, .form-submit .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .submit {
   border-radius: 0;
 }
 
 /* line 188, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn--default:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn--primary:last-child,
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn--default:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn--primary:last-child, .form-submit .btn-group-vertical > .btn-group:first-child:not(:last-child) > .submit:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .mega-dropdown__toggle {
   border-bottom-right-radius: 0;
@@ -5284,7 +5375,7 @@ tbody.collapse.in {
 }
 
 /* line 193, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn--default:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn--primary:first-child {
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn--default:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn--primary:first-child, .form-submit .btn-group-vertical > .btn-group:last-child:not(:first-child) > .submit:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
@@ -5297,14 +5388,14 @@ tbody.collapse.in {
   border-collapse: separate;
 }
 /* line 206, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-justified > .btn, .btn-group-justified > .btn--default, .btn-group-justified > .btn--primary,
+.btn-group-justified > .btn, .btn-group-justified > .btn--default, .btn-group-justified > .btn--primary, .form-submit .btn-group-justified > .submit,
 .btn-group-justified > .btn-group {
   float: none;
   display: table-cell;
   width: 1%;
 }
 /* line 212, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-justified > .btn-group .btn, .btn-group-justified > .btn-group .btn--default, .btn-group-justified > .btn-group .btn--primary {
+.btn-group-justified > .btn-group .btn, .btn-group-justified > .btn-group .btn--default, .btn-group-justified > .btn-group .btn--primary, .btn-group-justified > .btn-group .form-submit .submit, .form-submit .btn-group-justified > .btn-group .submit {
   width: 100%;
 }
 /* line 216, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
@@ -5313,16 +5404,19 @@ tbody.collapse.in {
 }
 
 /* line 237, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-[data-toggle="buttons"] > .btn input[type="radio"], [data-toggle="buttons"] > .btn--default input[type="radio"], [data-toggle="buttons"] > .btn--primary input[type="radio"],
+[data-toggle="buttons"] > .btn input[type="radio"], [data-toggle="buttons"] > .btn--default input[type="radio"], [data-toggle="buttons"] > .btn--primary input[type="radio"], .form-submit [data-toggle="buttons"] > .submit input[type="radio"],
 [data-toggle="buttons"] > .btn input[type="checkbox"],
 [data-toggle="buttons"] > .btn--default input[type="checkbox"],
 [data-toggle="buttons"] > .btn--primary input[type="checkbox"],
+.form-submit [data-toggle="buttons"] > .submit input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn--default input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn--primary input[type="radio"],
+.form-submit [data-toggle="buttons"] > .btn-group > .submit input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn--default input[type="checkbox"],
-[data-toggle="buttons"] > .btn-group > .btn--primary input[type="checkbox"] {
+[data-toggle="buttons"] > .btn-group > .btn--primary input[type="checkbox"],
+.form-submit [data-toggle="buttons"] > .btn-group > .submit input[type="checkbox"] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
@@ -5341,7 +5435,7 @@ tbody.collapse.in {
   padding-right: 0;
 }
 /* line 19, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
-.input-group .form-control {
+.input-group .form-control, .input-group .comment-form-comment textarea, .comment-form-comment .input-group textarea, .input-group .comment-form-author input, .comment-form-author .input-group input, .input-group .comment-form-email input, .comment-form-email .input-group input, .input-group .comment-form-url input, .comment-form-url .input-group input {
   position: relative;
   z-index: 2;
   float: left;
@@ -5349,20 +5443,36 @@ tbody.collapse.in {
   margin-bottom: 0;
 }
 /* line 33, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
-.input-group .form-control:focus {
+.input-group .form-control:focus, .input-group .comment-form-comment textarea:focus, .comment-form-comment .input-group textarea:focus, .input-group .comment-form-author input:focus, .comment-form-author .input-group input:focus, .input-group .comment-form-email input:focus, .comment-form-email .input-group input:focus, .input-group .comment-form-url input:focus, .comment-form-url .input-group input:focus {
   z-index: 3;
 }
 
 /* line 58, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
 .input-group-addon,
 .input-group-btn,
-.input-group .form-control {
+.input-group .form-control,
+.input-group .comment-form-comment textarea,
+.comment-form-comment .input-group textarea,
+.input-group .comment-form-author input,
+.comment-form-author .input-group input,
+.input-group .comment-form-email input,
+.comment-form-email .input-group input,
+.input-group .comment-form-url input,
+.comment-form-url .input-group input {
   display: table-cell;
 }
 /* line 63, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
 .input-group-addon:not(:first-child):not(:last-child),
 .input-group-btn:not(:first-child):not(:last-child),
-.input-group .form-control:not(:first-child):not(:last-child) {
+.input-group .form-control:not(:first-child):not(:last-child),
+.input-group .comment-form-comment textarea:not(:first-child):not(:last-child),
+.comment-form-comment .input-group textarea:not(:first-child):not(:last-child),
+.input-group .comment-form-author input:not(:first-child):not(:last-child),
+.comment-form-author .input-group input:not(:first-child):not(:last-child),
+.input-group .comment-form-email input:not(:first-child):not(:last-child),
+.comment-form-email .input-group input:not(:first-child):not(:last-child),
+.input-group .comment-form-url input:not(:first-child):not(:last-child),
+.comment-form-url .input-group input:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
 
@@ -5391,7 +5501,8 @@ tbody.collapse.in {
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .input-group-addon.btn,
 .input-group-sm > .input-group-btn > .input-group-addon.btn--default,
-.input-group-sm > .input-group-btn > .input-group-addon.btn--primary {
+.input-group-sm > .input-group-btn > .input-group-addon.btn--primary,
+.form-submit .input-group-sm > .input-group-btn > .input-group-addon.submit {
   padding: 5px 10px;
   font-size: 12px;
   border-radius: 3px;
@@ -5401,7 +5512,8 @@ tbody.collapse.in {
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .input-group-addon.btn,
 .input-group-lg > .input-group-btn > .input-group-addon.btn--default,
-.input-group-lg > .input-group-btn > .input-group-addon.btn--primary {
+.input-group-lg > .input-group-btn > .input-group-addon.btn--primary,
+.form-submit .input-group-lg > .input-group-btn > .input-group-addon.submit {
   padding: 10px 16px;
   font-size: 18px;
   border-radius: 6px;
@@ -5413,22 +5525,26 @@ tbody.collapse.in {
 }
 
 /* line 108, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
-.input-group .form-control:first-child,
+.input-group .form-control:first-child, .input-group .comment-form-comment textarea:first-child, .comment-form-comment .input-group textarea:first-child, .input-group .comment-form-author input:first-child, .comment-form-author .input-group input:first-child, .input-group .comment-form-email input:first-child, .comment-form-email .input-group input:first-child, .input-group .comment-form-url input:first-child, .comment-form-url .input-group input:first-child,
 .input-group-addon:first-child,
 .input-group-btn:first-child > .btn,
 .input-group-btn:first-child > .btn--default,
 .input-group-btn:first-child > .btn--primary,
+.form-submit .input-group-btn:first-child > .submit,
 .input-group-btn:first-child > .btn-group > .btn,
 .input-group-btn:first-child > .btn-group > .btn--default,
 .input-group-btn:first-child > .btn-group > .btn--primary,
+.form-submit .input-group-btn:first-child > .btn-group > .submit,
 .input-group-btn:first-child > .dropdown-toggle,
 .input-group-btn:first-child > .mega-dropdown__toggle,
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle):not(.mega-dropdown__toggle),
 .input-group-btn:last-child > .btn--default:not(:last-child):not(.dropdown-toggle):not(.mega-dropdown__toggle),
 .input-group-btn:last-child > .btn--primary:not(:last-child):not(.dropdown-toggle):not(.mega-dropdown__toggle),
+.form-submit .input-group-btn:last-child > .submit:not(:last-child):not(.dropdown-toggle):not(.mega-dropdown__toggle),
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn,
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn--default,
-.input-group-btn:last-child > .btn-group:not(:last-child) > .btn--primary {
+.input-group-btn:last-child > .btn-group:not(:last-child) > .btn--primary,
+.form-submit .input-group-btn:last-child > .btn-group:not(:last-child) > .submit {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
@@ -5439,22 +5555,26 @@ tbody.collapse.in {
 }
 
 /* line 120, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
-.input-group .form-control:last-child,
+.input-group .form-control:last-child, .input-group .comment-form-comment textarea:last-child, .comment-form-comment .input-group textarea:last-child, .input-group .comment-form-author input:last-child, .comment-form-author .input-group input:last-child, .input-group .comment-form-email input:last-child, .comment-form-email .input-group input:last-child, .input-group .comment-form-url input:last-child, .comment-form-url .input-group input:last-child,
 .input-group-addon:last-child,
 .input-group-btn:last-child > .btn,
 .input-group-btn:last-child > .btn--default,
 .input-group-btn:last-child > .btn--primary,
+.form-submit .input-group-btn:last-child > .submit,
 .input-group-btn:last-child > .btn-group > .btn,
 .input-group-btn:last-child > .btn-group > .btn--default,
 .input-group-btn:last-child > .btn-group > .btn--primary,
+.form-submit .input-group-btn:last-child > .btn-group > .submit,
 .input-group-btn:last-child > .dropdown-toggle,
 .input-group-btn:last-child > .mega-dropdown__toggle,
 .input-group-btn:first-child > .btn:not(:first-child),
 .input-group-btn:first-child > .btn--default:not(:first-child),
 .input-group-btn:first-child > .btn--primary:not(:first-child),
+.form-submit .input-group-btn:first-child > .submit:not(:first-child),
 .input-group-btn:first-child > .btn-group:not(:first-child) > .btn,
 .input-group-btn:first-child > .btn-group:not(:first-child) > .btn--default,
-.input-group-btn:first-child > .btn-group:not(:first-child) > .btn--primary {
+.input-group-btn:first-child > .btn-group:not(:first-child) > .btn--primary,
+.form-submit .input-group-btn:first-child > .btn-group:not(:first-child) > .submit {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
@@ -5471,24 +5591,24 @@ tbody.collapse.in {
   white-space: nowrap;
 }
 /* line 144, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
-.input-group-btn > .btn, .input-group-btn > .btn--default, .input-group-btn > .btn--primary {
+.input-group-btn > .btn, .input-group-btn > .btn--default, .input-group-btn > .btn--primary, .form-submit .input-group-btn > .submit {
   position: relative;
 }
 /* line 146, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
-.input-group-btn > .btn + .btn, .input-group-btn > .btn--default + .btn, .input-group-btn > .btn--primary + .btn, .input-group-btn > .btn + .btn--default, .input-group-btn > .btn--default + .btn--default, .input-group-btn > .btn--primary + .btn--default, .input-group-btn > .btn + .btn--primary, .input-group-btn > .btn--default + .btn--primary, .input-group-btn > .btn--primary + .btn--primary {
+.input-group-btn > .btn + .btn, .input-group-btn > .btn--default + .btn, .input-group-btn > .btn--primary + .btn, .form-submit .input-group-btn > .submit + .btn, .input-group-btn > .btn + .btn--default, .input-group-btn > .btn--default + .btn--default, .input-group-btn > .btn--primary + .btn--default, .form-submit .input-group-btn > .submit + .btn--default, .input-group-btn > .btn + .btn--primary, .input-group-btn > .btn--default + .btn--primary, .input-group-btn > .btn--primary + .btn--primary, .form-submit .input-group-btn > .submit + .btn--primary, .form-submit .input-group-btn > .btn + .submit, .form-submit .input-group-btn > .btn--default + .submit, .form-submit .input-group-btn > .btn--primary + .submit, .form-submit .input-group-btn > .submit + .submit {
   margin-left: -1px;
 }
 /* line 150, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
-.input-group-btn > .btn:hover, .input-group-btn > .btn--default:hover, .input-group-btn > .btn--primary:hover, .input-group-btn > .btn:focus, .input-group-btn > .btn--default:focus, .input-group-btn > .btn--primary:focus, .input-group-btn > .btn:active, .input-group-btn > .btn--default:active, .input-group-btn > .btn--primary:active {
+.input-group-btn > .btn:hover, .input-group-btn > .btn--default:hover, .input-group-btn > .btn--primary:hover, .form-submit .input-group-btn > .submit:hover, .input-group-btn > .btn:focus, .input-group-btn > .btn--default:focus, .input-group-btn > .btn--primary:focus, .form-submit .input-group-btn > .submit:focus, .input-group-btn > .btn:active, .input-group-btn > .btn--default:active, .input-group-btn > .btn--primary:active, .form-submit .input-group-btn > .submit:active {
   z-index: 2;
 }
 /* line 159, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
-.input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn--default, .input-group-btn:first-child > .btn--primary,
+.input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn--default, .input-group-btn:first-child > .btn--primary, .form-submit .input-group-btn:first-child > .submit,
 .input-group-btn:first-child > .btn-group {
   margin-right: -1px;
 }
 /* line 165, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
-.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn--default, .input-group-btn:last-child > .btn--primary,
+.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn--default, .input-group-btn:last-child > .btn--primary, .form-submit .input-group-btn:last-child > .submit,
 .input-group-btn:last-child > .btn-group {
   z-index: 2;
   margin-left: -1px;
@@ -5987,7 +6107,7 @@ tbody.collapse.in {
     vertical-align: middle;
   }
   /* line 485, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-  .navbar-form .form-control {
+  .navbar-form .form-control, .navbar-form .comment-form-comment textarea, .comment-form-comment .navbar-form textarea, .navbar-form .comment-form-author input, .comment-form-author .navbar-form input, .navbar-form .comment-form-email input, .comment-form-email .navbar-form input, .navbar-form .comment-form-url input, .comment-form-url .navbar-form input {
     display: inline-block;
     width: auto;
     vertical-align: middle;
@@ -6004,11 +6124,19 @@ tbody.collapse.in {
   /* line 500, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
   .navbar-form .input-group .input-group-addon,
   .navbar-form .input-group .input-group-btn,
-  .navbar-form .input-group .form-control {
+  .navbar-form .input-group .form-control,
+  .navbar-form .input-group .comment-form-comment textarea,
+  .comment-form-comment .navbar-form .input-group textarea,
+  .navbar-form .input-group .comment-form-author input,
+  .comment-form-author .navbar-form .input-group input,
+  .navbar-form .input-group .comment-form-email input,
+  .comment-form-email .navbar-form .input-group input,
+  .navbar-form .input-group .comment-form-url input,
+  .comment-form-url .navbar-form .input-group input {
     width: auto;
   }
   /* line 508, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-  .navbar-form .input-group > .form-control {
+  .navbar-form .input-group > .form-control, .navbar-form .comment-form-comment .input-group > textarea, .comment-form-comment .navbar-form .input-group > textarea, .navbar-form .comment-form-author .input-group > input, .comment-form-author .navbar-form .input-group > input, .navbar-form .comment-form-email .input-group > input, .comment-form-email .navbar-form .input-group > input, .navbar-form .comment-form-url .input-group > input, .comment-form-url .navbar-form .input-group > input {
     width: 100%;
   }
   /* line 512, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
@@ -6086,12 +6214,12 @@ tbody.collapse.in {
   margin-bottom: 8px;
 }
 /* line 346, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
-.navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn, .btn-group-sm > .navbar-btn.btn--default, .btn-group-sm > .navbar-btn.btn--primary {
+.navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn, .btn-group-sm > .navbar-btn.btn--default, .btn-group-sm > .navbar-btn.btn--primary, .form-submit .btn-group-sm > .navbar-btn.submit {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 /* line 349, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
-.navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn, .btn-group-xs > .navbar-btn.btn--default, .btn-group-xs > .navbar-btn.btn--primary {
+.navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn, .btn-group-xs > .navbar-btn.btn--default, .btn-group-xs > .navbar-btn.btn--primary, .form-submit .btn-group-xs > .navbar-btn.submit {
   margin-top: 14px;
   margin-bottom: 14px;
 }
@@ -6542,7 +6670,7 @@ tbody.collapse.in {
   display: none;
 }
 /* line 25, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_labels.scss */
-.btn .label, .btn--default .label, .btn--primary .label {
+.btn .label, .btn--default .label, .btn--primary .label, .form-submit .submit .label {
   position: relative;
   top: -1px;
 }
@@ -6628,12 +6756,12 @@ a.label:hover, a.label:focus {
   display: none;
 }
 /* line 27, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_badges.scss */
-.btn .badge, .btn--default .badge, .btn--primary .badge {
+.btn .badge, .btn--default .badge, .btn--primary .badge, .form-submit .submit .badge {
   position: relative;
   top: -1px;
 }
 /* line 32, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_badges.scss */
-.btn-xs .badge, .btn-group-xs > .btn .badge, .btn-group-xs > .btn--default .badge, .btn-group-xs > .btn--primary .badge, .btn-group-xs > .btn .badge, .btn-group-xs > .btn--default .badge, .btn-group-xs > .btn--primary .badge {
+.btn-xs .badge, .btn-group-xs > .btn .badge, .btn-group-xs > .btn--default .badge, .btn-group-xs > .btn--primary .badge, .form-submit .btn-group-xs > .submit .badge, .btn-group-xs > .btn .badge, .btn-group-xs > .btn--default .badge, .btn-group-xs > .btn--primary .badge, .form-submit .btn-group-xs > .submit .badge {
   top: 0;
   padding: 1px 5px;
 }
@@ -6993,6 +7121,7 @@ a.thumbnail.active {
 .media > .pull--right,
 .media > .navigation-header__cart,
 .media > .video-bar__ext-link,
+.media > .comment-metadata,
 .media > .read-more,
 .meta__author-avatar--post-header .media > img {
   padding-left: 10px;
@@ -7002,7 +7131,8 @@ a.thumbnail.active {
 .media-left,
 .media > .pull-left,
 .media > .pull--left,
-.media > .navigation-header__toggle {
+.media > .navigation-header__toggle,
+.media > .comment-author {
   padding-right: 10px;
 }
 
@@ -7928,12 +8058,12 @@ button.close {
   clear: both;
 }
 /* line 110, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_modals.scss */
-.modal-footer .btn + .btn, .modal-footer .btn--default + .btn, .modal-footer .btn--primary + .btn, .modal-footer .btn + .btn--default, .modal-footer .btn--default + .btn--default, .modal-footer .btn--primary + .btn--default, .modal-footer .btn + .btn--primary, .modal-footer .btn--default + .btn--primary, .modal-footer .btn--primary + .btn--primary {
+.modal-footer .btn + .btn, .modal-footer .btn--default + .btn, .modal-footer .btn--primary + .btn, .modal-footer .form-submit .submit + .btn, .form-submit .modal-footer .submit + .btn, .modal-footer .btn + .btn--default, .modal-footer .btn--default + .btn--default, .modal-footer .btn--primary + .btn--default, .modal-footer .form-submit .submit + .btn--default, .form-submit .modal-footer .submit + .btn--default, .modal-footer .btn + .btn--primary, .modal-footer .btn--default + .btn--primary, .modal-footer .btn--primary + .btn--primary, .modal-footer .form-submit .submit + .btn--primary, .form-submit .modal-footer .submit + .btn--primary, .modal-footer .form-submit .btn + .submit, .form-submit .modal-footer .btn + .submit, .modal-footer .form-submit .btn--default + .submit, .form-submit .modal-footer .btn--default + .submit, .modal-footer .form-submit .btn--primary + .submit, .form-submit .modal-footer .btn--primary + .submit, .modal-footer .form-submit .submit + .submit, .form-submit .modal-footer .submit + .submit {
   margin-left: 5px;
   margin-bottom: 0;
 }
 /* line 115, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_modals.scss */
-.modal-footer .btn-group .btn + .btn, .modal-footer .btn-group .btn--default + .btn, .modal-footer .btn-group .btn--primary + .btn, .modal-footer .btn-group .btn + .btn--default, .modal-footer .btn-group .btn--default + .btn--default, .modal-footer .btn-group .btn--primary + .btn--default, .modal-footer .btn-group .btn + .btn--primary, .modal-footer .btn-group .btn--default + .btn--primary, .modal-footer .btn-group .btn--primary + .btn--primary {
+.modal-footer .btn-group .btn + .btn, .modal-footer .btn-group .btn--default + .btn, .modal-footer .btn-group .btn--primary + .btn, .modal-footer .btn-group .form-submit .submit + .btn, .form-submit .modal-footer .btn-group .submit + .btn, .modal-footer .btn-group .btn + .btn--default, .modal-footer .btn-group .btn--default + .btn--default, .modal-footer .btn-group .btn--primary + .btn--default, .modal-footer .btn-group .form-submit .submit + .btn--default, .form-submit .modal-footer .btn-group .submit + .btn--default, .modal-footer .btn-group .btn + .btn--primary, .modal-footer .btn-group .btn--default + .btn--primary, .modal-footer .btn-group .btn--primary + .btn--primary, .modal-footer .btn-group .form-submit .submit + .btn--primary, .form-submit .modal-footer .btn-group .submit + .btn--primary, .modal-footer .btn-group .form-submit .btn + .submit, .form-submit .modal-footer .btn-group .btn + .submit, .modal-footer .btn-group .form-submit .btn--default + .submit, .form-submit .modal-footer .btn-group .btn--default + .submit, .modal-footer .btn-group .form-submit .btn--primary + .submit, .form-submit .modal-footer .btn-group .btn--primary + .submit, .modal-footer .btn-group .form-submit .submit + .submit, .form-submit .modal-footer .btn-group .submit + .submit {
   margin-left: -1px;
 }
 /* line 119, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_modals.scss */
@@ -8490,7 +8620,7 @@ button.close {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 /* line 229, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_carousel.scss */
-.carousel-caption .btn, .carousel-caption .btn--default, .carousel-caption .btn--primary {
+.carousel-caption .btn, .carousel-caption .btn--default, .carousel-caption .btn--primary, .carousel-caption .form-submit .submit, .form-submit .carousel-caption .submit {
   text-shadow: none;
 }
 
@@ -8546,12 +8676,12 @@ button.close {
 }
 
 /* line 15, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_utilities.scss */
-.pull-right, .pull--right, .navigation-header__cart, .video-bar__ext-link, .read-more, .meta__author-avatar--post-header img {
+.pull-right, .pull--right, .navigation-header__cart, .video-bar__ext-link, .comment-metadata, .read-more, .meta__author-avatar--post-header img {
   float: right !important;
 }
 
 /* line 18, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_utilities.scss */
-.pull-left, .pull--left, .navigation-header__toggle {
+.pull-left, .pull--left, .navigation-header__toggle, .comment-author {
   float: left !important;
 }
 
@@ -9036,7 +9166,7 @@ html {
 
 /*** 1.1 heading styles ***/
 /* line 11, ../sass/_typography.scss */
-.h1, .h1--opening, .h1--single-opening, .h2, .h2--hero, .h2--lg, .h3, .h3--popular, .h3--author-name, .h3--author-name-meta, .h3--carousel, .paragraph--opening, blockquote {
+.h1, .h1--opening, .h1--single-opening, .h2, .h2--hero, .h2--hero--hidden, .h2--lg, .h3, .h3--popular, .h3--author-name, .h3--author-name-meta, .h3--carousel, .paragraph--opening, blockquote {
   font-family: "Playfair Display", serif;
   font-weight: 400;
   color: #292929;
@@ -9078,27 +9208,28 @@ html {
 }
 
 /* line 35, ../sass/_typography.scss */
-.h2--hero {
-  color: #E4E4E4;
+.h2--hero, .h2--hero--hidden {
+  color: #ffffff;
   margin-bottom: 0.75em;
+  z-index: 110;
 }
 @media only screen and (min-width: 48em) {
   /* line 35, ../sass/_typography.scss */
-  .h2--hero {
-    font-size: 2em;
-    line-height: 1.125em;
+  .h2--hero, .h2--hero--hidden {
+    font-size: 1.5em;
+    line-height: 1.25em;
   }
 }
 @media only screen and (min-width: 62em) {
   /* line 35, ../sass/_typography.scss */
-  .h2--hero {
-    font-size: 2.375em;
-    line-height: 1.10526em;
+  .h2--hero, .h2--hero--hidden {
+    font-size: 1.625em;
+    line-height: 1.15385em;
     margin-bottom: 0.375em;
   }
 }
 
-/* line 47, ../sass/_typography.scss */
+/* line 51, ../sass/_typography.scss */
 .h2--lg {
   font-size: 1.375em;
   line-height: 1.36364em;
@@ -9106,40 +9237,40 @@ html {
   margin-bottom: 0.375em;
 }
 @media only screen and (min-width: 62em) {
-  /* line 47, ../sass/_typography.scss */
+  /* line 51, ../sass/_typography.scss */
   .h2--lg {
     font-size: 2em;
     line-height: 1.125em;
   }
 }
 
-/* line 56, ../sass/_typography.scss */
+/* line 60, ../sass/_typography.scss */
 .h3, .h3--popular, .h3--author-name, .h3--author-name-meta, .h3--carousel, .paragraph--opening, blockquote {
   font-size: 1.375em;
   line-height: 1.36364em;
 }
 @media only screen and (min-width: 62em) {
-  /* line 56, ../sass/_typography.scss */
+  /* line 60, ../sass/_typography.scss */
   .h3, .h3--popular, .h3--author-name, .h3--author-name-meta, .h3--carousel, .paragraph--opening, blockquote {
     font-size: 1.5em;
     line-height: 1.25em;
     line-height: 1.125em;
   }
 }
-/* line 63, ../sass/_typography.scss */
+/* line 67, ../sass/_typography.scss */
 .h3--accent, .h3--wht {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   color: #C99E66;
   text-transform: uppercase;
 }
-/* line 69, ../sass/_typography.scss */
+/* line 73, ../sass/_typography.scss */
 .h3--popular {
   color: #ffffff;
   margin: 0 0 1em 0;
 }
 @media only screen and (min-width: 48em) {
-  /* line 69, ../sass/_typography.scss */
+  /* line 73, ../sass/_typography.scss */
   .h3--popular {
     font-size: 1.125em;
     line-height: 1.33333em;
@@ -9149,19 +9280,19 @@ html {
   }
 }
 @media only screen and (min-width: 62em) {
-  /* line 69, ../sass/_typography.scss */
+  /* line 73, ../sass/_typography.scss */
   .h3--popular {
     font-size: 1.375em;
     line-height: 1.36364em;
     line-height: 1.125em;
   }
 }
-/* line 84, ../sass/_typography.scss */
+/* line 88, ../sass/_typography.scss */
 .h3--author-name, .h3--author-name-meta, .h3--carousel {
   font-size: 1.125em;
   line-height: 1.33333em;
 }
-/* line 88, ../sass/_typography.scss */
+/* line 92, ../sass/_typography.scss */
 .h3--author-name-meta {
   font-size: 1.375em;
   line-height: 1.36364em;
@@ -9169,7 +9300,7 @@ html {
   letter-spacing: 0.0625em;
   margin-bottom: 0.3em;
 }
-/* line 95, ../sass/_typography.scss */
+/* line 99, ../sass/_typography.scss */
 .h3--author-name-meta:before {
   content: "by ";
   text-transform: lowercase;
@@ -9179,26 +9310,26 @@ html {
   letter-spacing: 0;
 }
 
-/* line 106, ../sass/_typography.scss */
-.h4, .h4--reversed, .h4--author-title, .h4--author-handle, .h4--alt, .section-title, .section-title--centered, .section-title--share, .section-title--no-spacer {
+/* line 110, ../sass/_typography.scss */
+.h4, .h4--reversed, .h4--author-title, .h4--author-handle, .h4--alt, .section-title, .section-title--centered, .section-title--comments-area, .section-title--share, .section-title--no-spacer, .comment-author, .comment-reply-title {
   font-family: "Raleway", sans-serif;
   font-size: 0.875em;
   line-height: 1.28571em;
   letter-spacing: 0.0625em;
 }
-/* line 110, ../sass/_typography.scss */
+/* line 114, ../sass/_typography.scss */
 .h4--reversed {
   color: #EEEEEF;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-/* line 116, ../sass/_typography.scss */
+/* line 120, ../sass/_typography.scss */
 .h4--author-title {
   font-family: "Noto Sans", sans-serif;
   color: #555555;
   letter-spacing: 0;
 }
-/* line 122, ../sass/_typography.scss */
+/* line 126, ../sass/_typography.scss */
 .h4--author-handle {
   font-size: 0.75em;
   line-height: 1.5em;
@@ -9206,12 +9337,12 @@ html {
   text-transform: uppercase;
   letter-spacing: 0.125em;
 }
-/* line 130, ../sass/_typography.scss */
+/* line 134, ../sass/_typography.scss */
 .h4--author-handle:before {
   content: "@";
 }
 
-/* line 134, ../sass/_typography.scss */
+/* line 138, ../sass/_typography.scss */
 .h4--alt {
   font-family: "Playfair Display", serif;
   font-size: 1.125em;
@@ -9220,24 +9351,24 @@ html {
   letter-spacing: 0;
 }
 
-/* line 141, ../sass/_typography.scss */
-.section-title, .section-title--centered, .section-title--share, .section-title--no-spacer {
+/* line 145, ../sass/_typography.scss */
+.section-title, .section-title--centered, .section-title--comments-area, .section-title--share, .section-title--no-spacer, .comment-author, .comment-reply-title {
   color: #C99E66;
   text-transform: uppercase;
   font-weight: 500;
   margin-bottom: 1em;
 }
-/* line 147, ../sass/_typography.scss */
+/* line 151, ../sass/_typography.scss */
 .section-title--centered {
   position: relative;
 }
 @media only screen and (min-width: 62em) {
-  /* line 147, ../sass/_typography.scss */
+  /* line 151, ../sass/_typography.scss */
   .section-title--centered {
     text-align: center;
   }
 }
-/* line 154, ../sass/_typography.scss */
+/* line 158, ../sass/_typography.scss */
 .section-title--centered:after {
   content: " ";
   background-color: #C99E66;
@@ -9249,62 +9380,73 @@ html {
   bottom: -0.625em;
   margin: 0 auto;
 }
+/* line 169, ../sass/_typography.scss */
+.section-title--comments-area {
+  padding-top: 1em;
+  margin-bottom: 1em;
+  border-top: 1px solid #D4D4D4;
+}
 @media only screen and (min-width: 62em) {
-  /* line 165, ../sass/_typography.scss */
+  /* line 175, ../sass/_typography.scss */
   .section-title--share {
     text-align: center;
   }
 }
-/* line 171, ../sass/_typography.scss */
+/* line 181, ../sass/_typography.scss */
 .section-title--no-spacer {
   margin-bottom: 0;
 }
 
 /*** 1.2 body text styles ***/
-/* line 177, ../sass/_typography.scss */
-.paragraph, .paragraph--footer, .post__excerpt, .post__excerpt--lg {
+/* line 187, ../sass/_typography.scss */
+.paragraph, .paragraph--footer, .paragraph--hero, .post__excerpt, .post__excerpt--lg, .comment-content p, .comment-respond form p, .comment-awaiting-moderation {
   color: #555555;
   font-family: "Noto Sans", sans-serif;
   font-weight: 400;
   margin-top: 1em;
 }
 @media only screen and (min-width: 62em) {
-  /* line 177, ../sass/_typography.scss */
-  .paragraph, .paragraph--footer, .post__excerpt, .post__excerpt--lg {
+  /* line 187, ../sass/_typography.scss */
+  .paragraph, .paragraph--footer, .paragraph--hero, .post__excerpt, .post__excerpt--lg, .comment-content p, .comment-respond form p, .comment-awaiting-moderation {
     font-size: 0.875em;
     line-height: 1.28571em;
     line-height: 1.6875em;
   }
 }
-/* line 186, ../sass/_typography.scss */
+/* line 196, ../sass/_typography.scss */
 .paragraph--footer {
   color: #878787;
 }
-/* line 190, ../sass/_typography.scss */
+/* line 200, ../sass/_typography.scss */
 .paragraph--opening {
   font-size: 1.375em;
   line-height: 1.36364em;
   line-height: 1.3125em;
 }
+/* line 205, ../sass/_typography.scss */
+.paragraph--hero {
+  line-height: 1.125em;
+  color: #ffffff;
+}
 
-/* line 196, ../sass/_typography.scss */
+/* line 211, ../sass/_typography.scss */
 .meta {
   color: #9E9E9E;
   font-size: 0.75em;
   line-height: 1.5em;
 }
 
-/* line 200, ../sass/_typography.scss */
+/* line 215, ../sass/_typography.scss */
 .ss-icon {
   padding: 0 0.25em;
 }
-/* line 202, ../sass/_typography.scss */
+/* line 217, ../sass/_typography.scss */
 .ss-icon:hover {
   color: #C99E66;
 }
 
 /*** 1.3 blockquote ***/
-/* line 207, ../sass/_typography.scss */
+/* line 222, ../sass/_typography.scss */
 blockquote {
   font-size: 1.375em;
   line-height: 1.36364em;
@@ -9317,13 +9459,13 @@ blockquote {
   padding: 1em 1em 1em 2.8125em;
 }
 @media only screen and (min-width: 62em) {
-  /* line 207, ../sass/_typography.scss */
+  /* line 222, ../sass/_typography.scss */
   blockquote {
     padding: 1.875em 0 1.5em 3.75em;
     margin-top: 1.875em;
   }
 }
-/* line 221, ../sass/_typography.scss */
+/* line 236, ../sass/_typography.scss */
 blockquote:before {
   position: absolute;
   top: -30px;
@@ -9336,7 +9478,7 @@ blockquote:before {
   text-rendering: auto;
 }
 @media only screen and (min-width: 62em) {
-  /* line 221, ../sass/_typography.scss */
+  /* line 236, ../sass/_typography.scss */
   blockquote:before {
     content: '\201D';
   }
@@ -9346,7 +9488,7 @@ blockquote:before {
 @media only screen and (min-width: 48em) {
   /* line 11, ../sass/_layout.scss */
   .carousel--author, .featured-products {
-    margin-top: 2.8125em;
+    margin-top: 1.875em;
   }
 }
 
@@ -9515,8 +9657,8 @@ last update: 31/03/2016
 
 /* line 1, ../sass/modules/_main-navigation.scss */
 .main-navigation {
-  overflow: hidden;
   max-height: 0;
+  overflow: hidden;
   margin-top: 1em;
   -moz-transition: max-height, 0.4s, ease-in-out;
   -o-transition: max-height, 0.4s, ease-in-out;
@@ -9526,18 +9668,33 @@ last update: 31/03/2016
 @media only screen and (min-width: 62em) {
   /* line 1, ../sass/modules/_main-navigation.scss */
   .main-navigation {
-    max-height: 5em;
     margin-top: 1.875em;
     border-top: 1px solid #D4D4D4;
     border-bottom: 1px solid #D4D4D4;
+    max-height: 5em;
   }
 }
 /* line 13, ../sass/modules/_main-navigation.scss */
+.main-navigation__wrapper {
+  max-height: 0;
+  background-color: #ffffff;
+  -moz-transition: max-height, 0.4s, ease-in-out;
+  -o-transition: max-height, 0.4s, ease-in-out;
+  -webkit-transition: max-height, 0.4s, ease-in-out;
+  transition: max-height, 0.4s, ease-in-out;
+}
+@media only screen and (min-width: 62em) {
+  /* line 13, ../sass/modules/_main-navigation.scss */
+  .main-navigation__wrapper {
+    max-height: 5em;
+  }
+}
+/* line 21, ../sass/modules/_main-navigation.scss */
 .main-navigation__item {
   display: inline;
   text-align: center;
 }
-/* line 17, ../sass/modules/_main-navigation.scss */
+/* line 25, ../sass/modules/_main-navigation.scss */
 .main-navigation__link, .main-navigation__link--alpha, .main-navigation__link--omega, .main-navigation__link--selected {
   display: inline-block;
   color: #292929;
@@ -9551,33 +9708,33 @@ last update: 31/03/2016
   padding: 0.5625em 0;
 }
 @media only screen and (min-width: 62em) {
-  /* line 17, ../sass/modules/_main-navigation.scss */
+  /* line 25, ../sass/modules/_main-navigation.scss */
   .main-navigation__link, .main-navigation__link--alpha, .main-navigation__link--omega, .main-navigation__link--selected {
     width: auto;
     padding: 1.25em 3.125em;
   }
 }
-/* line 32, ../sass/modules/_main-navigation.scss */
+/* line 40, ../sass/modules/_main-navigation.scss */
 .main-navigation__link--alpha {
   padding-top: 0;
 }
-/* line 36, ../sass/modules/_main-navigation.scss */
+/* line 44, ../sass/modules/_main-navigation.scss */
 .main-navigation__link--omega {
   margin-bottom: 0.375em;
 }
 @media only screen and (min-width: 62em) {
-  /* line 36, ../sass/modules/_main-navigation.scss */
+  /* line 44, ../sass/modules/_main-navigation.scss */
   .main-navigation__link--omega {
     margin-bottom: 0;
   }
 }
-/* line 43, ../sass/modules/_main-navigation.scss */
+/* line 51, ../sass/modules/_main-navigation.scss */
 .main-navigation__link--selected {
   color: #C99E66;
 }
 
 /* wordpress class for selected item */
-/* line 49, ../sass/modules/_main-navigation.scss */
+/* line 57, ../sass/modules/_main-navigation.scss */
 .current-menu-item .main-navigation__link, .current-menu-item .main-navigation__link--alpha, .current-menu-item .main-navigation__link--omega, .current-menu-item .main-navigation__link--selected {
   color: #C99E66;
 }
@@ -9601,33 +9758,121 @@ last update: 31/03/2016
   border-left: 1px solid #D4D4D4;
 }
 
-/* line 1, ../sass/modules/_hero-carousel.scss */
-.hero-carousel {
-  box-sizing: border-box;
+/* line 2, ../sass/modules/_hero-gird.scss */
+.hero-grid {
   margin-top: 1em;
+  position: relative;
 }
 @media only screen and (min-width: 62em) {
-  /* line 1, ../sass/modules/_hero-carousel.scss */
-  .hero-carousel {
+  /* line 2, ../sass/modules/_hero-gird.scss */
+  .hero-grid {
     margin-top: 1.875em;
   }
 }
-/* line 8, ../sass/modules/_hero-carousel.scss */
+/* line 9, ../sass/modules/_hero-gird.scss */
+.hero-grid__border-overlay--alpha {
+  position: absolute;
+  top: 2.5em;
+  left: -6.25em;
+  width: 80%;
+  height: 28em;
+  border: 1px solid #C99E66;
+}
+/* line 18, ../sass/modules/_hero-gird.scss */
+.hero-grid__item {
+  position: relative;
+}
+/* line 20, ../sass/modules/_hero-gird.scss */
+.hero-grid__item h2 {
+  width: 80%;
+}
+/* line 23, ../sass/modules/_hero-gird.scss */
+.hero-grid__item h2 {
+  position: absolute;
+  top: 0;
+  padding-top: 1em;
+  padding-left: 1.4em;
+}
+/* line 30, ../sass/modules/_hero-gird.scss */
+.hero-grid__item--sm {
+  padding: 0;
+}
+@media only screen and (min-width: 75em) {
+  /* line 30, ../sass/modules/_hero-gird.scss */
+  .hero-grid__item--sm {
+    height: 17.5em;
+  }
+}
+/* line 37, ../sass/modules/_hero-gird.scss */
+.hero-grid__item--lg {
+  padding: 0;
+}
+@media only screen and (min-width: 75em) {
+  /* line 37, ../sass/modules/_hero-gird.scss */
+  .hero-grid__item--lg {
+    height: 17.5em;
+  }
+}
+/* line 43, ../sass/modules/_hero-gird.scss */
+.hero-grid__item--lg p {
+  width: 70%;
+}
+/* line 47, ../sass/modules/_hero-gird.scss */
+.hero-grid__item__shadow {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+/* line 54, ../sass/modules/_hero-gird.scss */
+.hero-grid__item__overlay {
+  position: absolute;
+  top: 5%;
+  left: 2.5%;
+  width: 95%;
+  height: 90%;
+  border: 1px solid #C99E66;
+}
+
+/*** hero posts - opening - added 20170728 ***/
+@media only screen and (min-width: 75em) {
+  /* line 66, ../sass/modules/_hero-gird.scss */
+  .post--hero__img {
+    height: 17.5em;
+  }
+}
+/* line 71, ../sass/modules/_hero-gird.scss */
+.post--hero__excerpt, .post--hero__excerpt--hidden {
+  position: absolute;
+  bottom: -10px;
+  padding: 0 1em 1.875em 2.8125em;
+}
+/* line 75, ../sass/modules/_hero-gird.scss */
+.post--hero__excerpt--hidden {
+  opacity: 0;
+}
+
+/* line 1, ../sass/modules/_hero-carousel.scss */
+.hero-carousel {
+  box-sizing: border-box;
+}
+/* line 4, ../sass/modules/_hero-carousel.scss */
 .hero-carousel__item {
   position: relative;
 }
 
-/* line 13, ../sass/modules/_hero-carousel.scss */
+/* line 9, ../sass/modules/_hero-carousel.scss */
 .hero-carousel-slide__img {
   height: 20em;
 }
 @media only screen and (min-width: 62em) {
-  /* line 13, ../sass/modules/_hero-carousel.scss */
+  /* line 9, ../sass/modules/_hero-carousel.scss */
   .hero-carousel-slide__img {
     height: 15em;
   }
 }
-/* line 19, ../sass/modules/_hero-carousel.scss */
+/* line 15, ../sass/modules/_hero-carousel.scss */
 .hero-carousel-slide__overlay {
   width: 100%;
   height: 100%;
@@ -9641,20 +9886,20 @@ last update: 31/03/2016
   background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.7));
   background-image: linear-gradient(rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.7));
 }
-/* line 27, ../sass/modules/_hero-carousel.scss */
+/* line 23, ../sass/modules/_hero-carousel.scss */
 .hero-carousel-slide__container {
   position: absolute;
   left: 5%;
   bottom: 5%;
   width: 90%;
 }
-/* line 36, ../sass/modules/_hero-carousel.scss */
+/* line 32, ../sass/modules/_hero-carousel.scss */
 .hero-carousel-slide__post-category {
   font-size: 0.875em;
   line-height: 1.28571em;
   letter-spacing: 0.0625em;
 }
-/* line 40, ../sass/modules/_hero-carousel.scss */
+/* line 36, ../sass/modules/_hero-carousel.scss */
 .hero-carousel-slide__meta {
   display: block;
   color: #ffffff;
@@ -9754,7 +9999,7 @@ last update: 31/03/2016
 }
 /* line 14, ../sass/modules/_post.scss */
 .post__img-overlay {
-  z-index: 98;
+  z-index: 50;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
@@ -9817,7 +10062,7 @@ last update: 31/03/2016
   margin-bottom: 0.75em;
 }
 /* line 65, ../sass/modules/_post.scss */
-.post__meta, .post--random__meta {
+.post__meta, .post--random__meta, .comment-metadata, .reply {
   color: #9E9E9E;
   font-size: 0.75em;
   line-height: 1.5em;
@@ -9992,41 +10237,52 @@ last update: 31/03/2016
   }
 }
 /* line 206, ../sass/modules/_post.scss */
-.post-content__social-share {
-  margin-top: 1.875em;
+.post-content__comments-area {
   padding-bottom: 1.875em;
+  margin-top: 1.875em;
   border-bottom: 1px solid #D4D4D4;
 }
 @media only screen and (min-width: 62em) {
   /* line 206, ../sass/modules/_post.scss */
-  .post-content__social-share {
+  .post-content__comments-area {
     margin-top: 2.8125em;
   }
 }
 /* line 215, ../sass/modules/_post.scss */
+.post-content__social-share {
+  margin-top: 1.875em;
+}
+@media only screen and (min-width: 62em) {
+  /* line 215, ../sass/modules/_post.scss */
+  .post-content__social-share {
+    margin-top: 2.8125em;
+  }
+}
+/* line 222, ../sass/modules/_post.scss */
 .post-content__navigation {
   padding: 1em 0 1em 0;
   border-bottom: 1px solid #D4D4D4;
 }
 
 /*** related posts section ***/
-/* line 222, ../sass/modules/_post.scss */
+/* line 229, ../sass/modules/_post.scss */
 .related-posts {
   margin-top: 1.875em;
 }
 @media only screen and (min-width: 62em) {
-  /* line 222, ../sass/modules/_post.scss */
+  /* line 229, ../sass/modules/_post.scss */
   .related-posts {
     margin-top: 2.8125em;
   }
 }
 
 /*** random posts - sidebar ***/
-/* line 231, ../sass/modules/_post.scss */
+/* line 238, ../sass/modules/_post.scss */
 .post--random__meta {
   border-top: none;
 }
 
+/*** hero posts - opening - added 20170728 - see /hero-gird/ ***/
 /* line 1, ../sass/modules/_card.scss */
 .card {
   box-sizing: border-box;
@@ -10285,7 +10541,7 @@ last update: 31/03/2016
 
 /*** bottons ***/
 /* line 2, ../sass/modules/_elements.scss */
-.btn, .btn--default, .btn--primary {
+.btn, .btn--default, .btn--primary, .form-submit .submit {
   display: inline-block;
   text-transform: uppercase;
   font-family: "Raleway", sans-serif;
@@ -10307,7 +10563,7 @@ last update: 31/03/2016
   background-color: #C99E66;
 }
 /* line 20, ../sass/modules/_elements.scss */
-.btn--primary {
+.btn--primary, .form-submit .submit {
   color: #ffffff;
   background-color: #C99E66;
 }
@@ -10596,8 +10852,127 @@ input[type="email"]::-webkit-input-placeholder {
   content: "Search results for: ";
 }
 
+/*** comments area ***/
+/* line 249, ../sass/modules/_elements.scss */
+.comments-area__comment-list .children {
+  margin-left: 1em;
+}
+
+/* line 256, ../sass/modules/_elements.scss */
+.comments-area__comment-list li:first-child {
+  padding-top: 1em;
+  margin-top: 0;
+  border-top: 1px solid #D4D4D4;
+}
+/* line 262, ../sass/modules/_elements.scss */
+.comments-area__comment-list li {
+  margin-top: 1em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #D4D4D4;
+}
+/* line 267, ../sass/modules/_elements.scss */
+.comments-area__comment-list li .children li:first-child {
+  padding-top: 0.25em;
+}
+/* line 270, ../sass/modules/_elements.scss */
+.comments-area__comment-list li .children li {
+  margin-top: 0.25em;
+  padding-bottom: 0.25em;
+  border-top: none;
+  border-bottom: none;
+}
+
+/* line 279, ../sass/modules/_elements.scss */
+.comment-author {
+  margin-bottom: 0;
+}
+
+/* line 288, ../sass/modules/_elements.scss */
+.comment-author img {
+  vertical-align: middle;
+  margin-right: 1em;
+}
+
+/* line 293, ../sass/modules/_elements.scss */
+.comment-metadata {
+  border-top: none;
+}
+/* line 296, ../sass/modules/_elements.scss */
+.comment-metadata .edit-link:before {
+  content: '|';
+}
+
+/* line 301, ../sass/modules/_elements.scss */
+.comment-content {
+  display: inline;
+  margin-left: 3.3125em;
+}
+/* line 304, ../sass/modules/_elements.scss */
+.comment-content p {
+  display: inline-block;
+  margin-top: 0;
+}
+
+/* line 310, ../sass/modules/_elements.scss */
+.reply {
+  border-top: none;
+  display: inline;
+  padding: 1em;
+}
+
+/* line 316, ../sass/modules/_elements.scss */
+.comment-respond {
+  margin-top: 1.875em;
+}
+/* line 318, ../sass/modules/_elements.scss */
+.comment-respond label {
+  text-transform: uppercase;
+}
+
+/* line 333, ../sass/modules/_elements.scss */
+.required {
+  color: #C99E66;
+  text-transform: uppercase;
+}
+
+/* line 339, ../sass/modules/_elements.scss */
+.comment-form-comment label {
+  display: block;
+}
+/* line 342, ../sass/modules/_elements.scss */
+.comment-form-comment textarea {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border-color: #C99E66;
+}
+
+/* line 350, ../sass/modules/_elements.scss */
+.comment-form-author label, .comment-form-email label, .comment-form-url label {
+  display: inline-block;
+}
+/* line 353, ../sass/modules/_elements.scss */
+.comment-form-author input, .comment-form-email input, .comment-form-url input {
+  display: inline-block;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border-color: #C99E66;
+}
+
+/* line 362, ../sass/modules/_elements.scss */
+.form-submit .submit {
+  font-style: normal;
+}
+
+/* line 367, ../sass/modules/_elements.scss */
+.comment-awaiting-moderation {
+  display: inline;
+  margin-left: 1em;
+}
+
 /*** single navigation ***/
-/* line 247, ../sass/modules/_elements.scss */
+/* line 373, ../sass/modules/_elements.scss */
 .single-navigation {
   width: 100%;
   position: relative;
@@ -10606,7 +10981,7 @@ input[type="email"]::-webkit-input-placeholder {
   table-layout: fixed;
   clear: both;
 }
-/* line 254, ../sass/modules/_elements.scss */
+/* line 380, ../sass/modules/_elements.scss */
 .single-navigation__prev {
   text-align: right;
   position: relative;
@@ -10614,11 +10989,11 @@ input[type="email"]::-webkit-input-placeholder {
   width: 50%;
   box-sizing: border-box;
 }
-/* line 260, ../sass/modules/_elements.scss */
+/* line 386, ../sass/modules/_elements.scss */
 .single-navigation__prev a {
   width: 100%;
 }
-/* line 264, ../sass/modules/_elements.scss */
+/* line 390, ../sass/modules/_elements.scss */
 .single-navigation__next {
   text-align: left;
   position: relative;
@@ -10627,17 +11002,17 @@ input[type="email"]::-webkit-input-placeholder {
   box-sizing: border-box;
   border-left: 1px solid #D4D4D4;
 }
-/* line 271, ../sass/modules/_elements.scss */
+/* line 397, ../sass/modules/_elements.scss */
 .single-navigation__next a {
   width: 100%;
 }
-/* line 275, ../sass/modules/_elements.scss */
+/* line 401, ../sass/modules/_elements.scss */
 .single-navigation__indicator {
   display: inline-block;
   vertical-align: middle;
   margin-top: -2px;
 }
-/* line 280, ../sass/modules/_elements.scss */
+/* line 406, ../sass/modules/_elements.scss */
 .single-navigation__post-title, .single-navigation__post-title--prev, .single-navigation__post-title--next {
   position: relative;
   display: inline-block;
@@ -10646,35 +11021,35 @@ input[type="email"]::-webkit-input-placeholder {
   width: calc(100% - 1.5em);
   padding: 0 1em;
 }
-/* line 288, ../sass/modules/_elements.scss */
+/* line 414, ../sass/modules/_elements.scss */
 .single-navigation__post-title--prev {
   text-align: right;
 }
-/* line 292, ../sass/modules/_elements.scss */
+/* line 418, ../sass/modules/_elements.scss */
 .single-navigation__post-title--next {
   text-align: left;
 }
 
 /*** read more ***/
-/* line 298, ../sass/modules/_elements.scss */
+/* line 424, ../sass/modules/_elements.scss */
 .read-more {
   text-transform: uppercase;
 }
 
 /*** meta ***/
-/* line 307, ../sass/modules/_elements.scss */
+/* line 433, ../sass/modules/_elements.scss */
 .meta__author-avatar--post-header img {
   width: 70%;
   border-radius: 50%;
   margin: 0 auto;
 }
 @media only screen and (min-width: 62em) {
-  /* line 307, ../sass/modules/_elements.scss */
+  /* line 433, ../sass/modules/_elements.scss */
   .meta__author-avatar--post-header img {
     width: 50%;
   }
 }
-/* line 317, ../sass/modules/_elements.scss */
+/* line 443, ../sass/modules/_elements.scss */
 .meta__data--post-header {
   box-sizing: border-box;
   padding: 0 15px 1em 15px;
@@ -10691,11 +11066,17 @@ input[type="email"]::-webkit-input-placeholder {
 /* line 5, ../sass/_states.scss */
 .is__sticky {
   position: fixed;
-  background-color: #ffffff;
+  background-color: transparent;
   width: 100%;
   left: 0;
   top: 0;
   z-index: 100;
   border-top: none;
+  border-bottom: none;
   margin-top: 0;
+}
+
+/* line 18, ../sass/_states.scss */
+.is__sticky.is__logged-in {
+  padding-top: 32px;
 }

@@ -243,6 +243,132 @@ input[type="email"] {
 		content: "Search results for: "
 	}
 }
+/*** comments area ***/
+.comments-area{
+	&__comment-list{
+		.children{
+			margin-left: $el__spacer--xs;
+		}
+	}
+}
+//overwrite default style
+.comments-area__comment-list{
+	li:first-child{
+		padding-top: $el__spacer--xs;
+		//padding-bottom: $el__spacer--xs;
+		margin-top: 0;
+		border-top: $el__border;
+	}
+	li{
+		margin-top: $el__spacer--xs;
+		padding-bottom: $el__spacer--xs/2;
+		border-bottom: $el__border;
+		.children{
+			li:first-child{
+				padding-top: $el__spacer--xs/4;
+			}
+			li{
+				margin-top: $el__spacer--xs/4;
+				padding-bottom: $el__spacer--xs/4;
+				border-top: none;
+				border-bottom: none;
+			}
+		}
+	}
+}
+.comment-author{
+	@extend .section-title;
+	margin-bottom: 0;
+}
+.comment-meta{
+
+}
+.comment-author{
+	@extend .pull--left;
+	img{
+		vertical-align: middle;
+		margin-right: $el__spacer--xs;
+	}
+}
+.comment-metadata{
+	@extend .pull--right, .post__meta;
+	border-top: none;
+	.edit-link:before{
+		//@extend .pull--right;
+		content: '|';
+	}
+}
+.comment-content{
+	display: inline;
+	margin-left: $el__spacer--xs + em(37);
+	p{
+		@extend .paragraph;
+		display: inline-block;
+		margin-top: 0;
+	}
+}
+.reply{
+	@extend .post__meta;
+	border-top: none;
+	display: inline;
+	padding: $el__spacer--xs;
+}
+.comment-respond{
+	margin-top: $el__spacer--sm;
+	label{
+		text-transform: uppercase;
+	}
+	form{
+		p{
+			@extend .paragraph;
+		}
+	}
+}
+.comment-reply-title{
+	@extend .section-title;
+}
+.comment-notes{
+	
+}
+.required{
+	color: $color__accent;
+	text-transform: uppercase;
+}
+.comment-form-comment{
+	@extend .col-xs-12;
+	label{
+		display: block;
+	}
+	textarea{
+		@extend .form-control;
+		@include border-radius(0);
+		border-color: $color__accent;
+	}
+}
+.comment-form-author, .comment-form-email, .comment-form-url{
+	@extend .col-xs-6;
+	label{
+		display: inline-block;
+	}
+	input{
+		@extend .form-control;
+		display: inline-block;
+		@include border-radius(0);
+		border-color: $color__accent;
+	}
+}
+.form-submit{
+	@extend .col-xs-6;
+	.submit{
+		@extend .btn--primary;
+		font-style: normal;
+	}
+}
+.comment-awaiting-moderation{
+	@extend .paragraph;
+	display: inline;
+	margin-left: $el__spacer--xs;
+}
 /*** single navigation ***/
 .single-navigation{
 	width: 100%;

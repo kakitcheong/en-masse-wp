@@ -1,0 +1,80 @@
+$item__height--lg: em(280);
+.hero-grid{
+	margin-top: $el__spacer--xs;
+	position: relative;
+	@include respond-to(md-screen){
+		margin-top: $el__spacer--sm;
+	}
+	&__border-overlay{
+		&--alpha{
+			position: absolute;
+			top: em(40);
+			left: em(-100);
+			width: 80%;
+			height: ($item__height--lg*2)*.8;			
+			border: 1px solid $color__accent;	
+		}
+	}
+	&__item{
+		position: relative;
+		h2{
+			width: 80%;
+		}
+		h2{
+			position: absolute;
+			top: 0;
+			//padding: $el__spacer--sm $el__spacer--xs 0 $el__spacer--md;
+			padding-top: $el__spacer--xs;
+			padding-left: $el__spacer--xs*1.4;
+		}
+		&--sm{
+			@extend .col-md-4;
+			padding: 0;
+			@include respond-to(lg-screen){
+				height: $item__height--lg;
+			}
+		}
+		&--lg{
+			@extend .col-md-8;
+			padding: 0;
+			@include respond-to(lg-screen){
+				height: $item__height--lg;
+			}
+			p{
+				width: 70%;
+			}
+		}
+		&__shadow{
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.5);
+		}
+		&__overlay{
+			position: absolute;
+			top: 5%;
+			left: 2.5%;
+			width: 95%;
+			height: 90%;
+			border: $el__border--accent;
+		}
+	}
+}
+/*** hero posts - opening - added 20170728 ***/
+.post--hero{
+	&__img{
+		@include respond-to(lg-screen){
+			height: $item__height--lg;
+		}
+	}
+	&__excerpt{
+		position: absolute;
+		bottom: -10px;
+		padding: 0 $el__spacer--xs $el__spacer--sm $el__spacer--md;
+		&--hidden{
+			@extend .post--hero__excerpt;
+			opacity: 0;
+		}
+	}		
+}

@@ -9,6 +9,7 @@
 
 get_header();
 $categories = get_the_category();
+while ( have_posts() ) : the_post(); 
 ?>
 <div class="breadcrumb-bar">
     <ol class="breadcrumb-bar__list h-list">
@@ -41,32 +42,30 @@ $categories = get_the_category();
 </div> <!-- /.post-opening -->
 <div class="row">
 	<section class="post-content">
-		<?php
-		while ( have_posts() ) : the_post();
-
-			get_template_part( 'template-parts/content', 'single' );
-
-			//the_post_navigation();
-
-			/* If comments are open or we have at least one comment, load up the comment template. -- temporally off
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-			*/
-
-		endwhile; // End of the loop.
-		?>
-		<div class="post-content__social-share">
-	        <div class="section-title--share">
-	            Share Post    
-	        </div> <!-- /.section-title -->
-	        <ul class="h-list--lg pull--center">
-	            <li class="h-list__item"><a class="h-list__link ss-icon ss-social-circle" href="#">facebook</a></li>
-	            <li class="h-list__item"><a class="h-list__link ss-icon ss-social-circle" href="#">twitter</a></li>
-	            <li class="h-list__item"><a class="h-list__link ss-icon ss-social-circle" href="#">linkedin</a></li>
-	            <li class="h-list__item"><a class="h-list__link ss-icon ss-social-circle" href="#">pinterest</a></li>
-	        </ul> <!-- /.h-list -->
-	    </div> <!-- /.post-content__social-share -->
+	<?php
+	get_template_part( 'template-parts/content', 'single' );
+	wpb_get_post_views(get_the_ID());
+	//the_post_navigation(); ?>
+	
+	<div class="post-content__social-share">
+        <div class="section-title--share">
+            Share Post    
+        </div> <!-- /.section-title -->
+        <ul class="h-list--lg pull--center">
+            <li class="h-list__item"><a class="h-list__link ss-icon ss-social-circle" href="#">facebook</a></li>
+            <li class="h-list__item"><a class="h-list__link ss-icon ss-social-circle" href="#">twitter</a></li>
+            <li class="h-list__item"><a class="h-list__link ss-icon ss-social-circle" href="#">linkedin</a></li>
+            <li class="h-list__item"><a class="h-list__link ss-icon ss-social-circle" href="#">pinterest</a></li>
+        </ul> <!-- /.h-list -->
+    </div> <!-- /.post-content__social-share -->
+	
+	<?php 
+	// If comments are open or we have at least one comment, load up the comment template. -- temporally off
+	if ( comments_open() || get_comments_number() ) :
+		comments_template();
+	endif; 
+	endwhile; // End of the loop.
+	?>
 	    <div class="post-content__navigation single-navigation">
             <div class="single-navigation__prev">
             	<?php $prev_post = get_previous_post();
@@ -94,7 +93,7 @@ $categories = get_the_category();
         <div class="row">
         <?php 
         	$args = array(
-				'showposts' => 3,
+				'posts_per_page' => 3,
 				'orderby'	=> 'rand',
 				'category_name' => $categories[0]->name,
 			);
